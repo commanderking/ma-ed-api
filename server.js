@@ -54,13 +54,14 @@ const convertMcasDataToHash = (mcasData) => {
 
 const sanitizedMcasData = sanitizeMcasData(mcasData);
 const hashedMcasData = convertMcasDataToHash(sanitizedMcasData);
+const SchoolCodeType = graphql.GraphQLInt;
 
 const schoolMcasDataType = new graphql.GraphQLObjectType({
   name: 'School',
   fields: {
     subject: { type: graphql.GraphQLString },
     schoolName: { type: graphql.GraphQLString },
-    schoolCode: { type: graphql.GraphQLInt },
+    schoolCode: { type: SchoolCodeType },
     exceededPercent: { type: graphql.GraphQLInt },
     metPercent: { type: graphql.GraphQLInt },
     partiallyMetPercent: { type: graphql.GraphQLInt },
@@ -68,18 +69,17 @@ const schoolMcasDataType = new graphql.GraphQLObjectType({
   }
 });
 
-const schoolsType = new graphql.GraphQLObjectType({
-  name: 'Schools',
-  fields: {
-    schools: { type: graphql.GraphQLList(schoolMcasDataType) }
-  }
-})
-
 // Define the Query type
 var queryType = new graphql.GraphQLObjectType({
   name: 'Query',
   fields: {
-    schools: {
+    allSchools: {
+      type: new graphql.GraphQLList(schoolMcasDataType),
+      resolve(_) {
+        return sanitizedMcasData;
+      }
+    },
+    allSchoolsForSubject: {
       type: new graphql.GraphQLList(schoolMcasDataType),
       args: {
         subject: { type: graphql.GraphQLString }
@@ -101,6 +101,18 @@ var queryType = new graphql.GraphQLObjectType({
         const schoolData = hashedMcasData[schoolCode][subject];
         return schoolData;
       }
+    },
+    schools: {
+      type: new graphql.GraphQLList(schoolMcasDataType),
+      args: {
+        subject: { type: graphql.GraphQLString },
+        schoolCodes: { type: new graphql.GraphQLList(SchoolCodeType) }
+      },
+      resolve: function(_, {subject, schoolCodes}) {
+        return schoolCodes.map((schoolCode) => {
+          return hashedMcasData[schoolCode][subject];
+        })
+      }
     }
   }
 });
@@ -108,6 +120,17 @@ var queryType = new graphql.GraphQLObjectType({
 var schema = new graphql.GraphQLSchema({query: queryType});
 
 var app = express();
+
+app.use("/graphql", function (req, res, next) {
+  // TEMPORARY FOR DEV ENVIRONMENTS TO HIT THIS
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   graphiql: true,
