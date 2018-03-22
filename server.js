@@ -3,6 +3,8 @@ var graphqlHTTP = require('express-graphql');
 var graphql = require('graphql');
 const _ = require('lodash');
 
+const PORT = process.env.port || 4000;
+
 const mcasData = require('./data/mcasData');
 
 const rawDataToSanitizedDataKeyMap = {
@@ -135,5 +137,5 @@ app.use('/graphql', graphqlHTTP({
   schema: schema,
   graphiql: true,
 }));
-app.listen(4000);
-console.log('Running a GraphQL API server at localhost:4000/graphql');
+app.listen(PORT);
+console.log(`Running a GraphQL API server at localhost:${PORT}/graphql`);
