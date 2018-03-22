@@ -3,7 +3,7 @@ var graphqlHTTP = require('express-graphql');
 var graphql = require('graphql');
 const _ = require('lodash');
 
-const PORT = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 const mcasData = require('./data/mcasData');
 
