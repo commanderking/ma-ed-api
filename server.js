@@ -2,43 +2,12 @@ var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var graphql = require('graphql');
 const _ = require('lodash');
+const mcasData = require('./data/mcasData');
+const mcasDistrictAll2017 = require('./data/mcas_district_all_2017');
+const { schoolMcasDataType } = require('./dataTypes');
+const { sanitizeMcasData } = require('./utils/sanitizeDataUtil');
 
 const PORT = process.env.PORT || 4000;
-
-const mcasData = require('./data/mcasData');
-
-const rawDataToSanitizedDataKeyMap = {
-  "School Name": 'schoolName',
-  "School Code": 'schoolCode',
-  "Subject": 'subject',
-  "M+E #": 'metAndExceededCount',
-  "M+E %": 'metAndExceededPercent',
-  "E #": 'exceededCount',
-  "E %": 'exceededPercent',
-  "M #": 'metCount',
-  "M %": 'metPercent',
-  "PM #": 'partiallyMetCount',
-  "PM %": 'partiallyMetPercent',
-  "NM #": 'notMetCount',
-  "NM %": 'notMetPercent',
-  "Student Included": 'studentCount',
-  "Avg. Scaled Score": 'averageScaledScore',
-  "SGP": 'sgp',
-  "Included In SGP": 'sgpCount',
-  "Ach. PCTL": 'achPCTL'
-}
-
-const sanitizeMcasData = (mcasData) => {
-  const sanitizedData = mcasData.map((school) => {
-    const sanitizedSchoolObject = {};
-    _.forOwn(school, (value, key) => {
-      sanitizedSchoolObject[rawDataToSanitizedDataKeyMap[key]] = value;
-    });
-
-    return sanitizedSchoolObject;
-  });
-  return sanitizedData;
-}
 
 const convertMcasDataToHash = (mcasData) => {
   const hashedMcasData = {};
@@ -57,19 +26,6 @@ const convertMcasDataToHash = (mcasData) => {
 const sanitizedMcasData = sanitizeMcasData(mcasData);
 const hashedMcasData = convertMcasDataToHash(sanitizedMcasData);
 const SchoolCodeType = graphql.GraphQLInt;
-
-const schoolMcasDataType = new graphql.GraphQLObjectType({
-  name: 'School',
-  fields: {
-    subject: { type: graphql.GraphQLString },
-    schoolName: { type: graphql.GraphQLString },
-    schoolCode: { type: SchoolCodeType },
-    exceededPercent: { type: graphql.GraphQLInt },
-    metPercent: { type: graphql.GraphQLInt },
-    partiallyMetPercent: { type: graphql.GraphQLInt },
-    notMetPercent: { type: graphql.GraphQLInt }
-  }
-});
 
 // Define the Query type
 var queryType = new graphql.GraphQLObjectType({
