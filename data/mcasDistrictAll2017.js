@@ -15036,3 +15036,5 @@ const mcasDistrictAll2017 = [
     "Included In SGP": "330,784"
   }
 ]
+
+module.exports = mcasDistrictAll2017;

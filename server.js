@@ -3,8 +3,9 @@ var graphqlHTTP = require('express-graphql');
 var graphql = require('graphql');
 const _ = require('lodash');
 const mcasData = require('./data/mcasData');
-const mcasDistrictAll2017 = require('./data/mcas_district_all_2017');
-const { schoolMcasDataType } = require('./dataTypes');
+const mcasDistrictAll2017Data = require('./data/mcasDistrictAll2017');
+const allMcasDistrict2017Data = require('./data/allMcasDistrictData2017');
+const { schoolMcasDataType, districtMcasDataType } = require('./dataTypes');
 const { sanitizeMcasData } = require('./utils/sanitizeDataUtil');
 
 const PORT = process.env.PORT || 4000;
@@ -25,6 +26,8 @@ const convertMcasDataToHash = (mcasData) => {
 
 const sanitizedMcasData = sanitizeMcasData(mcasData);
 const hashedMcasData = convertMcasDataToHash(sanitizedMcasData);
+
+const sanitizedMcasDistrictData = sanitizeMcasData(allMcasDistrict2017Data);
 const SchoolCodeType = graphql.GraphQLInt;
 
 // Define the Query type
@@ -45,6 +48,26 @@ var queryType = new graphql.GraphQLObjectType({
       resolve(_, {subject}) {
         return sanitizedMcasData.filter(school => {
           return school.subject === subject;
+        });
+      }
+    },
+    allDistricts: {
+      type: new graphql.GraphQLList(districtMcasDataType),
+      args: {
+        subject: { type: graphql.GraphQLString },
+        year: { type: graphql.GraphQLString },
+        studentGroup: { type: graphql.GraphQLString }
+      },
+      resolve: (_, { subject, year, studentGroup }) => {
+        console.log(subject);
+        console.log(year);
+        return sanitizedMcasDistrictData.filter(school => {
+          // should filter if subject defined and school subject matches
+          // if subject not defined, then it's automatically the correct subject
+          const isCorrectSubject = subject && school.subject === subject || !subject
+          const isCorrectYear = year && parseInt(school.year, 10) === parseInt(year, 10) || !year;
+          const isCorrectStudentGroup = studentGroup && school.studentGroup === studentGroup || !studentGroup
+          return isCorrectSubject && isCorrectYear && isCorrectStudentGroup;
         });
       }
     },

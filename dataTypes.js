@@ -13,8 +13,11 @@ const mcasDataType = {
 const districtMcasDataType = new graphql.GraphQLObjectType({
   name: 'District',
   fields: {
-    schoolName: { type: graphql.GraphQLString },
-    schoolCode: { type: SchoolCodeType },
+    districtName: { type: graphql.GraphQLString },
+    districtCode: { type: SchoolCodeType },
+    studentGroup: { type: graphql.GraphQLString },
+    year: { type: graphql.GraphQLString },
+    studentGroup: { type: graphql.GraphQLString },
     ...mcasDataType
   }
 })
