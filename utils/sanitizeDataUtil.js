@@ -1,10 +1,10 @@
 const _ = require('lodash');
 
 const rawDataToSanitizedDataKeyMap = {
-  "School Name": 'schoolName',
-  "School Code": 'schoolCode',
-  "District Name": 'districtName',
-  "District Code": 'districtCode',
+  "School Name": 'name',
+  "School Code": 'code',
+  "District Name": 'name',
+  "District Code": 'code',
   "Subject": 'subject',
   "M+E #": 'metAndExceededCount',
   "M+E %": 'metAndExceededPercent',

@@ -5,16 +5,16 @@ const _ = require('lodash');
 const mcasData = require('./data/mcasData');
 const mcasDistrictAll2017Data = require('./data/mcasDistrictAll2017');
 const allMcasDistrict2017Data = require('./data/allMcasDistrictData2017');
-const { schoolMcasDataType, districtMcasDataType } = require('./dataTypes');
+const { schoolMcasDataType, districtMcasDataType, districtType } = require('./dataTypes');
 const { sanitizeMcasData } = require('./utils/sanitizeDataUtil');
-
+const allDistricts = require('./data/allDistricts');
 const PORT = process.env.PORT || 4000;
 
 const convertMcasDataToHash = (mcasData) => {
   const hashedMcasData = {};
   mcasData.forEach(school => {
     const subject = school.subject;
-    const schoolCode = school.schoolCode;
+    const schoolCode = school.code;
     if (!hashedMcasData[schoolCode]) {
       hashedMcasData[schoolCode] = {};
     };
@@ -24,10 +24,40 @@ const convertMcasDataToHash = (mcasData) => {
   return hashedMcasData;
 }
 
+const convertDistrictDataToHash = (mcasData) => {
+  const hashedMcasData = {};
+  mcasData.forEach(district => {
+    const { code, subject, studentGroup } = district;
+    if (!hashedMcasData[code]) {
+      hashedMcasData[code] = {
+        [studentGroup]: {
+          [subject]: district
+        }
+      };
+    } else if (!hashedMcasData[code][studentGroup]) {
+      hashedMcasData[code] = {
+        ...hashedMcasData[code],
+        [studentGroup]: {
+          [subject]: district
+        }
+      }
+    } else if (!hashedMcasData[code][studentGroup][subject]) {
+      hashedMcasData[code][studentGroup] = {
+        ...hashedMcasData[code][studentGroup],
+        [subject]: district
+      }
+    }
+  });
+  return hashedMcasData;
+}
+
 const sanitizedMcasData = sanitizeMcasData(mcasData);
 const hashedMcasData = convertMcasDataToHash(sanitizedMcasData);
 
 const sanitizedMcasDistrictData = sanitizeMcasData(allMcasDistrict2017Data);
+const hashedDistrictData = convertDistrictDataToHash(sanitizedMcasDistrictData);
+
+console.log('hashedDistrictData', hashedDistrictData);
 const SchoolCodeType = graphql.GraphQLInt;
 
 // Define the Query type
@@ -52,23 +82,9 @@ var queryType = new graphql.GraphQLObjectType({
       }
     },
     allDistricts: {
-      type: new graphql.GraphQLList(districtMcasDataType),
-      args: {
-        subject: { type: graphql.GraphQLString },
-        year: { type: graphql.GraphQLString },
-        studentGroup: { type: graphql.GraphQLString }
-      },
-      resolve: (_, { subject, year, studentGroup }) => {
-        console.log(subject);
-        console.log(year);
-        return sanitizedMcasDistrictData.filter(school => {
-          // should filter if subject defined and school subject matches
-          // if subject not defined, then it's automatically the correct subject
-          const isCorrectSubject = subject && school.subject === subject || !subject
-          const isCorrectYear = year && parseInt(school.year, 10) === parseInt(year, 10) || !year;
-          const isCorrectStudentGroup = studentGroup && school.studentGroup === studentGroup || !studentGroup
-          return isCorrectSubject && isCorrectYear && isCorrectStudentGroup;
-        });
+      type: new graphql.GraphQLList(districtType),
+      resolve(_) {
+        return allDistricts;
       }
     },
     school: {
@@ -83,6 +99,18 @@ var queryType = new graphql.GraphQLObjectType({
         return schoolData;
       }
     },
+    districtMcas: {
+      type: districtType,
+      args: {
+        code: { type: graphql.GraphQLInt },
+        subject: { type: graphql.GraphQLString },
+        studentGroup: { type: graphql.GraphQLString }
+      },
+      resolve: function (_, { code, subject, studentGroup }) {
+        const districtMcas = hashedDistrictData[code][studentGroup][subject];
+        return districtMcas;
+      }
+    },
     schools: {
       type: new graphql.GraphQLList(schoolMcasDataType),
       args: {
@@ -92,6 +120,18 @@ var queryType = new graphql.GraphQLObjectType({
       resolve: function(_, {subject, schoolCodes}) {
         return schoolCodes.map((schoolCode) => {
           return hashedMcasData[schoolCode][subject];
+        })
+      }
+    },
+    schoolDistricts: {
+      type: new graphql.GraphQLList(schoolMcasDataType),
+      args: {
+        subject: { type: graphql.GraphQLString },
+        codes: { type: new graphql.GraphQLList(SchoolCodeType) }
+      },
+      resolve: function(_, {subject, codes}) {
+        return codes.map((code) => {
+          return hashedMcasData[code][subject];
         })
       }
     }

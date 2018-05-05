@@ -2,6 +2,14 @@ var graphql = require('graphql');
 
 const SchoolCodeType = graphql.GraphQLInt;
 
+const districtType = new graphql.GraphQLObjectType({
+  name: 'District',
+  fields: {
+    name: { type: graphql.GraphQLString },
+    code: { type: graphql.GraphQLInt }
+  }
+})
+
 const mcasDataType = {
   subject: { type: graphql.GraphQLString },
   exceededPercent: { type: graphql.GraphQLInt },
@@ -13,11 +21,10 @@ const mcasDataType = {
 const districtMcasDataType = new graphql.GraphQLObjectType({
   name: 'District',
   fields: {
-    districtName: { type: graphql.GraphQLString },
-    districtCode: { type: SchoolCodeType },
+    name: { type: graphql.GraphQLString },
+    code: { type: SchoolCodeType },
     studentGroup: { type: graphql.GraphQLString },
     year: { type: graphql.GraphQLString },
-    studentGroup: { type: graphql.GraphQLString },
     ...mcasDataType
   }
 })
@@ -25,13 +32,14 @@ const districtMcasDataType = new graphql.GraphQLObjectType({
 const schoolMcasDataType = new graphql.GraphQLObjectType({
   name: 'School',
   fields: {
-    schoolName: { type: graphql.GraphQLString },
-    schoolCode: { type: SchoolCodeType },
+    name: { type: graphql.GraphQLString },
+    code: { type: SchoolCodeType },
     ...mcasDataType
   }
 });
 
 module.exports = {
   districtMcasDataType: districtMcasDataType,
-  schoolMcasDataType: schoolMcasDataType
+  schoolMcasDataType: schoolMcasDataType,
+  districtType: districtType
 }
