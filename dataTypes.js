@@ -10,8 +10,16 @@ const districtType = new graphql.GraphQLObjectType({
   }
 })
 
+const subjectType = new graphql.GraphQLEnumType({
+  name: 'Subject',
+  values: {
+    ELA: { value: 'ELA' },
+    MATH: { value: 'MATH' }
+  }
+});
+
 const mcasDataType = {
-  subject: { type: graphql.GraphQLString },
+  subject: { type: subjectType },
   exceededPercent: { type: graphql.GraphQLInt },
   metPercent: { type: graphql.GraphQLInt },
   partiallyMetPercent: { type: graphql.GraphQLInt },

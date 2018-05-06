@@ -100,7 +100,7 @@ var queryType = new graphql.GraphQLObjectType({
       }
     },
     districtMcas: {
-      type: districtType,
+      type: schoolMcasDataType,
       args: {
         code: { type: graphql.GraphQLInt },
         subject: { type: graphql.GraphQLString },
