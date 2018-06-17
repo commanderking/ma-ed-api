@@ -37,6 +37,50 @@ const sanitizeMcasData = (mcasData) => {
   return sanitizedData;
 }
 
+const convertSchoolMcasDataToHash = (mcasData) => {
+  const hashedMcasData = {};
+  mcasData.forEach(school => {
+    const subject = school.subject;
+    const schoolCode = school.code;
+    if (!hashedMcasData[schoolCode]) {
+      hashedMcasData[schoolCode] = {};
+    };
+    hashedMcasData[schoolCode][subject] = school;
+  });
+
+  return hashedMcasData;
+}
+
+const convertDistrictDataToHash = (mcasData) => {
+  const hashedMcasData = {};
+  mcasData.forEach(district => {
+    const { code, subject, studentGroup } = district;
+    if (!hashedMcasData[code]) {
+      hashedMcasData[code] = {
+        [studentGroup]: {
+          [subject]: district
+        }
+      };
+    } else if (!hashedMcasData[code][studentGroup]) {
+      hashedMcasData[code] = {
+        ...hashedMcasData[code],
+        [studentGroup]: {
+          [subject]: district
+        }
+      }
+    } else if (!hashedMcasData[code][studentGroup][subject]) {
+      hashedMcasData[code][studentGroup] = {
+        ...hashedMcasData[code][studentGroup],
+        [subject]: district
+      }
+    }
+  });
+  return hashedMcasData;
+}
+
+
 module.exports = {
-  sanitizeMcasData
+  sanitizeMcasData,
+  convertSchoolMcasDataToHash,
+  convertDistrictDataToHash
 }

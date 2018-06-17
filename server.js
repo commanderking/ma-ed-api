@@ -6,58 +6,16 @@ const mcasData = require('./data/mcasData');
 const mcasDistrictAll2017Data = require('./data/mcasDistrictAll2017');
 const allMcasDistrict2017Data = require('./data/allMcasDistrictData2017');
 const { schoolMcasDataType, districtMcasDataType, districtType } = require('./dataTypes');
-const { sanitizeMcasData } = require('./utils/sanitizeDataUtil');
+const { sanitizeMcasData, convertDistrictDataToHash, convertSchoolMcasDataToHash } = require('./utils/sanitizeDataUtil');
 const allDistricts = require('./data/allDistricts');
 const PORT = process.env.PORT || 4000;
 
-const convertMcasDataToHash = (mcasData) => {
-  const hashedMcasData = {};
-  mcasData.forEach(school => {
-    const subject = school.subject;
-    const schoolCode = school.code;
-    if (!hashedMcasData[schoolCode]) {
-      hashedMcasData[schoolCode] = {};
-    };
-    hashedMcasData[schoolCode][subject] = school;
-  });
-
-  return hashedMcasData;
-}
-
-const convertDistrictDataToHash = (mcasData) => {
-  const hashedMcasData = {};
-  mcasData.forEach(district => {
-    const { code, subject, studentGroup } = district;
-    if (!hashedMcasData[code]) {
-      hashedMcasData[code] = {
-        [studentGroup]: {
-          [subject]: district
-        }
-      };
-    } else if (!hashedMcasData[code][studentGroup]) {
-      hashedMcasData[code] = {
-        ...hashedMcasData[code],
-        [studentGroup]: {
-          [subject]: district
-        }
-      }
-    } else if (!hashedMcasData[code][studentGroup][subject]) {
-      hashedMcasData[code][studentGroup] = {
-        ...hashedMcasData[code][studentGroup],
-        [subject]: district
-      }
-    }
-  });
-  return hashedMcasData;
-}
-
 const sanitizedMcasData = sanitizeMcasData(mcasData);
-const hashedMcasData = convertMcasDataToHash(sanitizedMcasData);
+const hashedMcasData = convertSchoolMcasDataToHash(sanitizedMcasData);
 
 const sanitizedMcasDistrictData = sanitizeMcasData(allMcasDistrict2017Data);
 const hashedDistrictData = convertDistrictDataToHash(sanitizedMcasDistrictData);
 
-console.log('hashedDistrictData', hashedDistrictData);
 const SchoolCodeType = graphql.GraphQLInt;
 
 // Define the Query type
@@ -68,17 +26,6 @@ var queryType = new graphql.GraphQLObjectType({
       type: new graphql.GraphQLList(schoolMcasDataType),
       resolve(_) {
         return sanitizedMcasData;
-      }
-    },
-    allSchoolsForSubject: {
-      type: new graphql.GraphQLList(schoolMcasDataType),
-      args: {
-        subject: { type: graphql.GraphQLString }
-      },
-      resolve(_, {subject}) {
-        return sanitizedMcasData.filter(school => {
-          return school.subject === subject;
-        });
       }
     },
     allDistricts: {
@@ -97,18 +44,6 @@ var queryType = new graphql.GraphQLObjectType({
       resolve: function (_, {subject, schoolCode}) {
         const schoolData = hashedMcasData[schoolCode][subject];
         return schoolData;
-      }
-    },
-    districtMcas: {
-      type: schoolMcasDataType,
-      args: {
-        code: { type: graphql.GraphQLInt },
-        subject: { type: graphql.GraphQLString },
-        studentGroup: { type: graphql.GraphQLString }
-      },
-      resolve: function (_, { code, subject, studentGroup }) {
-        const districtMcas = hashedDistrictData[code][studentGroup][subject];
-        return districtMcas;
       }
     },
     schools: {
@@ -132,6 +67,19 @@ var queryType = new graphql.GraphQLObjectType({
       resolve: function(_, {subject, codes}) {
         return codes.map((code) => {
           return hashedMcasData[code][subject];
+        })
+      }
+    },
+    districtMcas: {
+      type: new graphql.GraphQLList(schoolMcasDataType),
+      args: {
+        codes: { type: new graphql.GraphQLList(graphql.GraphQLInt) },
+        subject: { type: graphql.GraphQLString },
+        studentGroup: { type: graphql.GraphQLString }
+      },
+      resolve: function (root, { codes, subject, studentGroup }, context, info) {
+        return codes.map((districtCode) => {
+          return hashedDistrictData[districtCode][studentGroup][subject]
         })
       }
     }
