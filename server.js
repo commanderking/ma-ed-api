@@ -46,7 +46,7 @@ var queryType = new graphql.GraphQLObjectType({
         return schoolData;
       }
     },
-    schools: {
+    schoolMcas: {
       type: new graphql.GraphQLList(schoolMcasDataType),
       args: {
         subject: { type: graphql.GraphQLString },
@@ -55,18 +55,6 @@ var queryType = new graphql.GraphQLObjectType({
       resolve: function(_, {subject, schoolCodes}) {
         return schoolCodes.map((schoolCode) => {
           return hashedMcasData[schoolCode][subject];
-        })
-      }
-    },
-    schoolDistricts: {
-      type: new graphql.GraphQLList(schoolMcasDataType),
-      args: {
-        subject: { type: graphql.GraphQLString },
-        codes: { type: new graphql.GraphQLList(SchoolCodeType) }
-      },
-      resolve: function(_, {subject, codes}) {
-        return codes.map((code) => {
-          return hashedMcasData[code][subject];
         })
       }
     },
