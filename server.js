@@ -3,13 +3,6 @@ require("dotenv").config();
 var express = require("express");
 var graphqlHTTP = require("express-graphql");
 var graphql = require("graphql");
-const _ = require("lodash");
-const {
-  schoolMcasDataType,
-  districtMcasDataType,
-  districtType,
-  subjectType
-} = require("./dataTypes");
 
 const { createQuery } = require("./schema");
 
