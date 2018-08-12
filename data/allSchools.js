@@ -7233,9 +7233,4 @@ export const allSchools = [
     schoolCode: 3500010,
     districtCode: 3500000
   },
-  {
-    name: "State Totals - State Totals",
-    schoolCode: 0,
-    districtCode: "#VALUE!"
-  }
 ];

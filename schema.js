@@ -3,7 +3,8 @@ const {
   schoolMcasDataType,
   districtMcasDataType,
   districtType,
-  subjectType
+  subjectType,
+  studentGroupType
 } = require("./dataTypes");
 const {
   sanitizeMcasData,
@@ -21,6 +22,7 @@ const hashedMcasData = convertSchoolMcasDataToHash(sanitizedMcasData);
 
 const sanitizedMcasDistrictData = sanitizeMcasData(allMcasDistrict2017Data);
 const hashedDistrictData = convertDistrictDataToHash(sanitizedMcasDistrictData);
+const _ = require("lodash");
 
 // Define the Query type
 const createQuery = db => {
@@ -40,12 +42,15 @@ const createQuery = db => {
       allDistricts: {
         description: "Gets basic information about the district",
         type: new graphql.GraphQLList(districtType),
-        resolve() {
+        resolve(district) {
           return allDistricts;
         }
       },
+      // DEPRECATED - should be replaced by schoolMCAS below, but still being used in some places
+      // in front end code
       school: {
         type: schoolMcasDataType,
+        description: "DEPRECATED - DO NOT USE",
         args: {
           schoolCode: { type: graphql.GraphQLInt },
           subject: { type: subjectType }
@@ -57,6 +62,7 @@ const createQuery = db => {
       },
       schoolMcas: {
         type: new graphql.GraphQLList(schoolMcasDataType),
+        description: "Gets Mcas Data for a school or multiple schools",
         args: {
           subject: { type: subjectType },
           schoolCodes: { type: new graphql.GraphQLList(SchoolCodeType) }
@@ -69,21 +75,32 @@ const createQuery = db => {
       },
       districtMcas: {
         type: new graphql.GraphQLList(districtMcasDataType),
+        description: "Gets Mcas Data for a district or multiple districts",
         args: {
           codes: { type: new graphql.GraphQLList(graphql.GraphQLInt) },
           subject: { type: subjectType },
-          studentGroup: { type: graphql.GraphQLString }
+          studentGroup: { type: studentGroupType }
         },
-        resolve: function(
-          root,
-          { codes, subject, studentGroup },
-          context,
-          info
-        ) {
-          // console.log(info.fieldNodes[0].selectionSet.selections);
-          return codes.map(districtCode => {
-            return hashedDistrictData[districtCode][studentGroup][subject];
+        resolve: async function(root, { codes, subject, studentGroup }) {
+          // It's possible to see which fields are queried through
+          // info.fieldNodes[0].selectionSet.selections (where info is 4th parametere in the resolve function);
+          // Ideally, don't want to make the database call if the field is not queried,
+          // possibly can move to own resolver? But then would need to pass db reference in
+
+          const schoolsCollection = db.collection("schools");
+          const schools = await schoolsCollection
+            .find({ districtCode: { $in: codes } })
+            .toArray();
+          const districtMcas = await codes.map(districtCode => {
+            return {
+              ...hashedDistrictData[districtCode][studentGroup][subject],
+              schools: schools.filter(
+                school => school.districtCode === districtCode
+              )
+            };
           });
+
+          return districtMcas;
         }
       }
     }
