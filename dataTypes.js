@@ -1,5 +1,6 @@
 var graphql = require("graphql");
 
+const { GraphQLList, GraphQLInt, GraphQLObjectType } = graphql;
 const SchoolCodeType = graphql.GraphQLInt;
 
 const districtType = new graphql.GraphQLObjectType({
@@ -7,6 +8,15 @@ const districtType = new graphql.GraphQLObjectType({
   fields: {
     name: { type: graphql.GraphQLString },
     code: { type: graphql.GraphQLInt }
+  }
+});
+
+const schoolType = new GraphQLObjectType({
+  name: "School",
+  fields: {
+    name: { type: graphql.GraphQLString },
+    schoolCode: { type: GraphQLInt },
+    districtCode: { type: GraphQLInt }
   }
 });
 
@@ -44,18 +54,14 @@ const districtMcasDataType = new graphql.GraphQLObjectType({
     studentGroup: { type: studentGroupType },
     year: { type: graphql.GraphQLString },
     schools: {
-      type: new graphql.GraphQLList(graphql.GraphQLInt),
-      resolve: districtMcas => {
-        console.log("districtCode", districtMcas.code);
-        return [districtMcas.code];
-      }
+      type: new GraphQLList(schoolType)
     },
     ...mcasDataType
   }
 });
 
 const schoolMcasDataType = new graphql.GraphQLObjectType({
-  name: "School",
+  name: "SchoolMcas",
   fields: {
     name: { type: graphql.GraphQLString },
     code: { type: SchoolCodeType },
