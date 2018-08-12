@@ -35,14 +35,14 @@ const createQuery = db => {
       allSchools: {
         description: "Gets list of all schools MCAS Data",
         type: new graphql.GraphQLList(schoolMcasDataType),
-        resolve(_) {
+        resolve() {
           return sanitizedMcasData;
         }
       },
       allDistricts: {
         description: "Gets basic information about the district",
         type: new graphql.GraphQLList(districtType),
-        resolve(district) {
+        resolve() {
           return allDistricts;
         }
       },
