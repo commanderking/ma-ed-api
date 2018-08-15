@@ -37,6 +37,7 @@ const studentGroupType = new GraphQLEnumType({
   name: "StudentGroup",
   values: {
     BLACK: { type: "BLACK" },
+    HISPANIC: { type: "HISPANIC" },
     ECONOMICALLY_DISADVANTAGED: { type: "ECONOMICALLY_DISADVANTAGED" },
     HIGH_NEEDS: { type: "HIGH_NEEDS" },
     ALL: { type: "ALL" }
@@ -51,19 +52,28 @@ const mcasDataType = {
   notMetPercent: { type: GraphQLInt }
 };
 
-const districtMcasDataType = new GraphQLObjectType({
-  name: "DistrictMcas",
-  fields: {
-    name: { type: GraphQLString },
-    code: { type: GraphQLInt },
-    studentGroup: { type: studentGroupType },
-    year: { type: GraphQLString },
-    schools: {
-      type: new GraphQLList(schoolType)
-    },
-    ...mcasDataType
-  }
-});
+const createDistrictMcasDataType = db =>
+  new GraphQLObjectType({
+    name: "DistrictMcas",
+    fields: {
+      name: { type: GraphQLString },
+      code: { type: GraphQLInt },
+      studentGroup: { type: studentGroupType },
+      year: { type: GraphQLString },
+      schools: {
+        type: new GraphQLList(schoolType),
+        resolve: async districtMcas => {
+          console.log("making db call for schools");
+          const schoolsCollection = db.collection("schools");
+          const schools = await schoolsCollection
+            .find({ districtCode: districtMcas.code })
+            .toArray();
+          return schools;
+        }
+      },
+      ...mcasDataType
+    }
+  });
 
 const schoolMcasDataType = new GraphQLObjectType({
   name: "SchoolMcas",
@@ -75,9 +85,11 @@ const schoolMcasDataType = new GraphQLObjectType({
 });
 
 module.exports = {
+  createDistrictMcasDataType,
   districtMcasDataType: districtMcasDataType,
   schoolMcasDataType: schoolMcasDataType,
   districtType: districtType,
+  schoolType,
   subjectType,
   studentGroupType
 };
