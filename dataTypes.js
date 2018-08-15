@@ -1,26 +1,31 @@
 var graphql = require("graphql");
 
-const { GraphQLList, GraphQLInt, GraphQLObjectType } = graphql;
-const SchoolCodeType = graphql.GraphQLInt;
+const {
+  GraphQLList,
+  GraphQLInt,
+  GraphQLString,
+  GraphQLObjectType,
+  GraphQLEnumType
+} = graphql;
 
-const districtType = new graphql.GraphQLObjectType({
+const districtType = new GraphQLObjectType({
   name: "District",
   fields: {
-    name: { type: graphql.GraphQLString },
-    code: { type: graphql.GraphQLInt }
+    name: { type: GraphQLString },
+    code: { type: GraphQLInt }
   }
 });
 
 const schoolType = new GraphQLObjectType({
   name: "School",
   fields: {
-    name: { type: graphql.GraphQLString },
+    name: { type: GraphQLString },
     schoolCode: { type: GraphQLInt },
     districtCode: { type: GraphQLInt }
   }
 });
 
-const subjectType = new graphql.GraphQLEnumType({
+const subjectType = new GraphQLEnumType({
   name: "Subject",
   values: {
     ELA: { value: "ELA" },
@@ -28,10 +33,11 @@ const subjectType = new graphql.GraphQLEnumType({
   }
 });
 
-const studentGroupType = new graphql.GraphQLEnumType({
+const studentGroupType = new GraphQLEnumType({
   name: "StudentGroup",
   values: {
     BLACK: { type: "BLACK" },
+    HISPANIC: { type: "HISPANIC" },
     ECONOMICALLY_DISADVANTAGED: { type: "ECONOMICALLY_DISADVANTAGED" },
     HIGH_NEEDS: { type: "HIGH_NEEDS" },
     ALL: { type: "ALL" }
@@ -40,39 +46,50 @@ const studentGroupType = new graphql.GraphQLEnumType({
 
 const mcasDataType = {
   subject: { type: subjectType },
-  exceededPercent: { type: graphql.GraphQLInt },
-  metPercent: { type: graphql.GraphQLInt },
-  partiallyMetPercent: { type: graphql.GraphQLInt },
-  notMetPercent: { type: graphql.GraphQLInt }
+  exceededPercent: { type: GraphQLInt },
+  metPercent: { type: GraphQLInt },
+  partiallyMetPercent: { type: GraphQLInt },
+  notMetPercent: { type: GraphQLInt }
 };
 
-const districtMcasDataType = new graphql.GraphQLObjectType({
-  name: "DistrictMcas",
-  fields: {
-    name: { type: graphql.GraphQLString },
-    code: { type: SchoolCodeType },
-    studentGroup: { type: studentGroupType },
-    year: { type: graphql.GraphQLString },
-    schools: {
-      type: new GraphQLList(schoolType)
-    },
-    ...mcasDataType
-  }
-});
+const createDistrictMcasDataType = db =>
+  new GraphQLObjectType({
+    name: "DistrictMcas",
+    fields: {
+      name: { type: GraphQLString },
+      code: { type: GraphQLInt },
+      studentGroup: { type: studentGroupType },
+      year: { type: GraphQLString },
+      schools: {
+        type: new GraphQLList(schoolType),
+        resolve: async districtMcas => {
+          console.log("making db call for schools");
+          const schoolsCollection = db.collection("schools");
+          const schools = await schoolsCollection
+            .find({ districtCode: districtMcas.code })
+            .toArray();
+          return schools;
+        }
+      },
+      ...mcasDataType
+    }
+  });
 
-const schoolMcasDataType = new graphql.GraphQLObjectType({
+const schoolMcasDataType = new GraphQLObjectType({
   name: "SchoolMcas",
   fields: {
-    name: { type: graphql.GraphQLString },
-    code: { type: SchoolCodeType },
+    name: { type: GraphQLString },
+    code: { type: GraphQLInt },
     ...mcasDataType
   }
 });
 
 module.exports = {
+  createDistrictMcasDataType,
   districtMcasDataType: districtMcasDataType,
   schoolMcasDataType: schoolMcasDataType,
   districtType: districtType,
+  schoolType,
   subjectType,
   studentGroupType
 };

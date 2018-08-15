@@ -1,18 +1,17 @@
 var graphql = require("graphql");
 const {
   schoolMcasDataType,
-  districtMcasDataType,
   districtType,
+  schoolType,
   subjectType,
-  studentGroupType
+  studentGroupType,
+  createDistrictMcasDataType
 } = require("./dataTypes");
 const {
   sanitizeMcasData,
-  convertDistrictDataToHash,
   convertSchoolMcasDataToHash
 } = require("./utils/sanitizeDataUtil");
 const mcasData = require("./data/mcasData");
-const allMcasDistrict2017Data = require("./data/allMcasDistrictData2017");
 const allDistricts = require("./data/allDistricts");
 
 const SchoolCodeType = graphql.GraphQLInt;
@@ -20,13 +19,11 @@ const SchoolCodeType = graphql.GraphQLInt;
 const sanitizedMcasData = sanitizeMcasData(mcasData);
 const hashedMcasData = convertSchoolMcasDataToHash(sanitizedMcasData);
 
-const sanitizedMcasDistrictData = sanitizeMcasData(allMcasDistrict2017Data);
-const hashedDistrictData = convertDistrictDataToHash(sanitizedMcasDistrictData);
 const _ = require("lodash");
 
 // Define the Query type
 const createQuery = db => {
-  console.log("db", db);
+  const districtMcasDataType = createDistrictMcasDataType(db);
   return new graphql.GraphQLObjectType({
     name: "MCASQuery",
     description:
@@ -34,9 +31,10 @@ const createQuery = db => {
     fields: {
       allSchools: {
         description: "Gets list of all schools MCAS Data",
-        type: new graphql.GraphQLList(schoolMcasDataType),
-        resolve() {
-          return sanitizedMcasData;
+        type: new graphql.GraphQLList(schoolType),
+        resolve: async () => {
+          const schoolsCollection = db.collection("schools");
+          return await schoolsCollection.find({}).toArray();
         }
       },
       allDistricts: {
@@ -73,6 +71,13 @@ const createQuery = db => {
           });
         }
       },
+      districtMcasAll: {
+        type: new graphql.GraphQLList(districtMcasDataType),
+        description: "Gets Mcas Data for a district or multiple districts",
+        resolve: function() {
+          return sanitizedMcasDistrictData;
+        }
+      },
       districtMcas: {
         type: new graphql.GraphQLList(districtMcasDataType),
         description: "Gets Mcas Data for a district or multiple districts",
@@ -82,25 +87,16 @@ const createQuery = db => {
           studentGroup: { type: studentGroupType }
         },
         resolve: async function(root, { codes, subject, studentGroup }) {
-          // It's possible to see which fields are queried through
-          // info.fieldNodes[0].selectionSet.selections (where info is 4th parametere in the resolve function);
-          // Ideally, don't want to make the database call if the field is not queried,
-          // possibly can move to own resolver? But then would need to pass db reference in
-
-          const schoolsCollection = db.collection("schools");
-          const schools = await schoolsCollection
-            .find({ districtCode: { $in: codes } })
+          const districtMcasCollection = db.collection("districtMcas");
+          const districtMcasResults = await districtMcasCollection
+            .find({
+              "District Code": { $in: codes },
+              "Student Group": studentGroup,
+              Subject: subject
+            })
             .toArray();
-          const districtMcas = await codes.map(districtCode => {
-            return {
-              ...hashedDistrictData[districtCode][studentGroup][subject],
-              schools: schools.filter(
-                school => school.districtCode === districtCode
-              )
-            };
-          });
 
-          return districtMcas;
+          return sanitizeMcasData(districtMcasResults);
         }
       }
     }
