@@ -62,8 +62,7 @@ const createDistrictMcasDataType = db =>
       year: { type: GraphQLString },
       schools: {
         type: new GraphQLList(schoolType),
-        resolve: async (districtMcas, args) => {
-          console.log("args", args);
+        resolve: async districtMcas => {
           console.log("making db call for schools");
           const schoolsCollection = db.collection("schools");
           const schools = await schoolsCollection
