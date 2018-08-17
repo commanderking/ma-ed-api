@@ -20,6 +20,14 @@ const mcasData = require("./data/mcasData");
 const sanitizedMcasData = sanitizeMcasData(mcasData);
 const hashedMcasData = convertSchoolMcasDataToHash(sanitizedMcasData);
 
+const getDistrictCodeParameter = codes =>
+  codes ? { "District Code": { $in: codes } } : {};
+
+const getStudentGroupParameter = studentGroup =>
+  studentGroup ? { "Student Group": studentGroup } : {};
+
+const getSubjectParameter = subject => (subject ? { Subject: subject } : {});
+
 // Define the Query type
 const createQuery = db => {
   const districtMcasDataType = createDistrictMcasDataType(db);
@@ -47,7 +55,8 @@ const createQuery = db => {
       // in front end code
       school: {
         type: schoolMcasDataType,
-        description: "DEPRECATED - DO NOT USE",
+        description: "DEPRECATED - DO NOT USE - Instead use schoolMcas",
+        deprecationReason: "Should use schoolMcas",
         args: {
           schoolCode: { type: graphql.GraphQLInt },
           subject: { type: subjectType }
@@ -83,13 +92,13 @@ const createQuery = db => {
           subject: { type: subjectType },
           studentGroup: { type: studentGroupType }
         },
-        resolve: async function(root, { codes, subject, studentGroup }) {
+        resolve: async (root, { codes = [], subject, studentGroup }) => {
           const districtMcasCollection = db.collection("districtMcas");
           const districtMcasResults = await districtMcasCollection
             .find({
-              "District Code": { $in: codes },
-              "Student Group": studentGroup,
-              Subject: subject
+              ...getDistrictCodeParameter(codes),
+              ...getStudentGroupParameter(studentGroup),
+              ...getSubjectParameter(subject)
             })
             .toArray();
 
