@@ -39,6 +39,7 @@ const studentGroupType = new GraphQLEnumType({
     BLACK: { type: "BLACK" },
     HISPANIC: { type: "HISPANIC" },
     ECONOMICALLY_DISADVANTAGED: { type: "ECONOMICALLY_DISADVANTAGED" },
+    NON_ECONOMICALLY_DISADVANTAGED: { type: "ECONOMICALLY_DISADVANTAGED" },
     HIGH_NEEDS: { type: "HIGH_NEEDS" },
     ALL: { type: "ALL" }
   }
