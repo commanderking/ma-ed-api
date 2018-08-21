@@ -51,8 +51,6 @@ const createQuery = db => {
           return allDistricts;
         }
       },
-      // DEPRECATED - should be replaced by schoolMCAS below, but still being used in some places
-      // in front end code
       school: {
         type: schoolMcasDataType,
         description: "DEPRECATED - DO NOT USE - Instead use schoolMcas",

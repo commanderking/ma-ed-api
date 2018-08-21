@@ -1,5 +1,8 @@
 var graphql = require("graphql");
-
+const {
+  convertStringNumberWithCommaToNumber,
+  sanitizeMcasData
+} = require("./utils/sanitizeDataUtil");
 const {
   GraphQLList,
   GraphQLInt,
@@ -50,8 +53,54 @@ const mcasDataType = {
   exceededPercent: { type: GraphQLInt },
   metPercent: { type: GraphQLInt },
   partiallyMetPercent: { type: GraphQLInt },
-  notMetPercent: { type: GraphQLInt }
+  notMetPercent: { type: GraphQLInt },
+  studentCount: {
+    type: GraphQLInt,
+    resolve: mcas => convertStringNumberWithCommaToNumber(mcas.studentCount)
+  }
 };
+
+const schoolMcasDataType = new GraphQLObjectType({
+  name: "SchoolMcas",
+  fields: {
+    name: { type: GraphQLString },
+    code: { type: GraphQLInt },
+    ...mcasDataType
+  }
+});
+
+const createSchoolWithMcasType = db =>
+  new GraphQLObjectType({
+    name: "SchoolWithMcasData",
+    fields: {
+      name: { type: GraphQLString },
+      schoolCode: { type: GraphQLInt },
+      districtCode: { type: GraphQLInt },
+      // TODO: Right now only mcas All 2017 is in the db
+      mcasAll2017: {
+        type: schoolMcasDataType,
+        resolve: async schoolMcas => {
+          console.log("schoolMcas", schoolMcas);
+          console.log("findObject", {
+            "School Code": schoolMcas.schoolCode,
+            Subject: schoolMcas.subject
+          });
+          const schoolMcasCollection = db.collection("schoolMcasData");
+          const schoolMcasResults = await schoolMcasCollection
+            .find({
+              "School Code": schoolMcas.schoolCode,
+              Subject: schoolMcas.subject
+            })
+            .toArray();
+          console.log(
+            "schoolMcasResults",
+            sanitizeMcasData(schoolMcasResults)[0]
+          );
+          return sanitizeMcasData(schoolMcasResults)[0];
+        }
+      }
+    }
+  });
 
 const createDistrictMcasDataType = db =>
   new GraphQLObjectType({
@@ -62,28 +111,24 @@ const createDistrictMcasDataType = db =>
       studentGroup: { type: studentGroupType },
       year: { type: GraphQLString },
       schools: {
-        type: new GraphQLList(schoolType),
+        type: new GraphQLList(createSchoolWithMcasType(db)),
         resolve: async districtMcas => {
           console.log("making db call for schools");
           const schoolsCollection = db.collection("schools");
           const schools = await schoolsCollection
             .find({ districtCode: districtMcas.code })
             .toArray();
-          return schools;
+
+          // Append districtMcas subject to school object
+          return schools.map(school => ({
+            ...school,
+            subject: districtMcas.subject
+          }));
         }
       },
       ...mcasDataType
     }
   });
-
-const schoolMcasDataType = new GraphQLObjectType({
-  name: "SchoolMcas",
-  fields: {
-    name: { type: GraphQLString },
-    code: { type: GraphQLInt },
-    ...mcasDataType
-  }
-});
 
 module.exports = {
   createDistrictMcasDataType,
