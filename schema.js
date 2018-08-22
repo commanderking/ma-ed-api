@@ -13,7 +13,7 @@ const {
 } = require("./utils/sanitizeDataUtil");
 const allDistricts = require("./data/allDistricts");
 
-const SchoolCodeType = graphql.GraphQLInt;
+const { GraphQLList, GraphQLInt, GraphQLObjectType } = graphql;
 
 // REMOVE once we refactor schoolMcas
 const mcasData = require("./data/mcasData");
@@ -31,14 +31,14 @@ const getSubjectParameter = subject => (subject ? { Subject: subject } : {});
 // Define the Query type
 const createQuery = db => {
   const districtMcasDataType = createDistrictMcasDataType(db);
-  return new graphql.GraphQLObjectType({
+  return new GraphQLObjectType({
     name: "MCASQuery",
     description:
       "API for getting School or District MCAS Data based on Massachusetts DOE data: http://profiles.doe.mass.edu/state_report/",
     fields: {
       allSchools: {
         description: "Gets list of all schools MCAS Data",
-        type: new graphql.GraphQLList(schoolType),
+        type: new GraphQLList(schoolType),
         resolve: async () => {
           const schoolsCollection = db.collection("schools");
           return await schoolsCollection.find({}).toArray();
@@ -46,7 +46,7 @@ const createQuery = db => {
       },
       allDistricts: {
         description: "Gets basic information about the district",
-        type: new graphql.GraphQLList(districtType),
+        type: new GraphQLList(districtType),
         resolve() {
           return allDistricts;
         }
@@ -56,22 +56,22 @@ const createQuery = db => {
         description: "DEPRECATED - DO NOT USE - Instead use schoolMcas",
         deprecationReason: "Should use schoolMcas",
         args: {
-          schoolCode: { type: graphql.GraphQLInt },
+          schoolCode: { type: GraphQLInt },
           subject: { type: subjectType }
         },
-        resolve: function(_, { subject, schoolCode }) {
+        resolve: function(root, { subject, schoolCode }) {
           const schoolData = hashedMcasData[schoolCode][subject];
           return schoolData;
         }
       },
       schoolMcas: {
-        type: new graphql.GraphQLList(schoolMcasDataType),
+        type: new GraphQLList(schoolMcasDataType),
         description: "Gets MCAS Data for a school or multiple schools",
         args: {
           subject: { type: subjectType },
-          schoolCodes: { type: new graphql.GraphQLList(SchoolCodeType) }
+          schoolCodes: { type: new GraphQLList(GraphQLInt) }
         },
-        resolve: async function(_, { subject, schoolCodes }) {
+        resolve: async (root, { subject, schoolCodes }) => {
           const schoolMcasCollection = db.collection("schoolMcasData");
           const schoolMcasResults = await schoolMcasCollection
             .find({
@@ -83,10 +83,10 @@ const createQuery = db => {
         }
       },
       districtMcas: {
-        type: new graphql.GraphQLList(districtMcasDataType),
+        type: new GraphQLList(districtMcasDataType),
         description: "Gets MCAS Data for a district or multiple districts",
         args: {
-          codes: { type: new graphql.GraphQLList(graphql.GraphQLInt) },
+          codes: { type: new GraphQLList(graphql.GraphQLInt) },
           subject: { type: subjectType },
           studentGroup: { type: studentGroupType }
         },

@@ -80,11 +80,6 @@ const createSchoolWithMcasType = db =>
       mcasAll2017: {
         type: schoolMcasDataType,
         resolve: async schoolMcas => {
-          console.log("schoolMcas", schoolMcas);
-          console.log("findObject", {
-            "School Code": schoolMcas.schoolCode,
-            Subject: schoolMcas.subject
-          });
           const schoolMcasCollection = db.collection("schoolMcasData");
           const schoolMcasResults = await schoolMcasCollection
             .find({
@@ -92,10 +87,6 @@ const createSchoolWithMcasType = db =>
               Subject: schoolMcas.subject
             })
             .toArray();
-          console.log(
-            "schoolMcasResults",
-            sanitizeMcasData(schoolMcasResults)[0]
-          );
           return sanitizeMcasData(schoolMcasResults)[0];
         }
       }
@@ -119,7 +110,7 @@ const createDistrictMcasDataType = db =>
             .find({ districtCode: districtMcas.code })
             .toArray();
 
-          // Append districtMcas subject to school object
+          // TODO: Might be a better way of passing the subject to createSchoolWithMcasType
           return schools.map(school => ({
             ...school,
             subject: districtMcas.subject
