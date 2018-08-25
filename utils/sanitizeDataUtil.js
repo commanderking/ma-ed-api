@@ -22,10 +22,11 @@ const rawDataToSanitizedDataKeyMap = {
   "Included In SGP": "sgpCount",
   "Ach. PCTL": "achPCTL",
   "Student Group": "studentGroup",
-  Year: "year"
+  Year: "year",
+  "Average Salary": "averageSalary"
 };
 
-const sanitizeMcasData = mcasData => {
+const sanitizeData = mcasData => {
   const sanitizedData = mcasData.map(school => {
     const sanitizedSchoolObject = {};
     _.forOwn(school, (value, key) => {
@@ -84,7 +85,7 @@ const convertStringNumberWithCommaToNumber = stringNumberWithComma =>
     : stringNumberWithComma;
 
 module.exports = {
-  sanitizeMcasData,
+  sanitizeData,
   convertSchoolMcasDataToHash,
   convertDistrictDataToHash,
   convertStringNumberWithCommaToNumber

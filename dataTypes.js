@@ -1,7 +1,7 @@
 var graphql = require("graphql");
 const {
   convertStringNumberWithCommaToNumber,
-  sanitizeMcasData
+  sanitizeData
 } = require("./utils/sanitizeDataUtil");
 const {
   GraphQLList,
@@ -87,7 +87,7 @@ const createSchoolWithMcasType = db =>
               Subject: schoolMcas.subject
             })
             .toArray();
-          return sanitizeMcasData(schoolMcasResults)[0];
+          return sanitizeData(schoolMcasResults)[0];
         }
       }
     }
@@ -121,11 +121,20 @@ const createDistrictMcasDataType = db =>
     }
   });
 
+const districtTeacherSalaryType = new GraphQLObjectType({
+  name: "teacherSalaries",
+  fields: {
+    name: { type: GraphQLString },
+    averageSalary: { type: GraphQLString }
+  }
+});
+
 module.exports = {
   createDistrictMcasDataType,
   schoolMcasDataType,
   districtType,
   schoolType,
   subjectType,
-  studentGroupType
+  studentGroupType,
+  districtTeacherSalaryType
 };

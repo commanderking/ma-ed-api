@@ -1,0 +1,2595 @@
+[
+  {
+    "District Name": "Abington",
+    "Year": 2016,
+    "District Code": 10000,
+    "Salary Totals": "$9,767,834",
+    "Average Salary": "$75,195",
+    "FTE Count": 130
+  },
+  {
+    "District Name": "Acton-Boxborough",
+    "Year": 2016,
+    "District Code": 6000000,
+    "Salary Totals": "$29,363,081",
+    "Average Salary": "$79,900",
+    "FTE Count": 368
+  },
+  {
+    "District Name": "Acushnet",
+    "Year": 2016,
+    "District Code": 30000,
+    "Salary Totals": "$4,755,405",
+    "Average Salary": "$67,934",
+    "FTE Count": 70
+  },
+  {
+    "District Name": "Adams-Cheshire",
+    "Year": 2016,
+    "District Code": 6030000,
+    "Salary Totals": "$6,691,452",
+    "Average Salary": "$74,932",
+    "FTE Count": 89
+  },
+  {
+    "District Name": "Agawam",
+    "Year": 2016,
+    "District Code": 50000,
+    "Salary Totals": "$22,248,427",
+    "Average Salary": "$68,965",
+    "FTE Count": 323
+  },
+  {
+    "District Name": "Amesbury",
+    "Year": 2016,
+    "District Code": 70000,
+    "Salary Totals": "$12,254,577",
+    "Average Salary": "$74,406",
+    "FTE Count": 165
+  },
+  {
+    "District Name": "Amherst",
+    "Year": 2016,
+    "District Code": 80000,
+    "Salary Totals": "$9,005,730",
+    "Average Salary": "$74,121",
+    "FTE Count": 122
+  },
+  {
+    "District Name": "Amherst-Pelham",
+    "Year": 2016,
+    "District Code": 6050000,
+    "Salary Totals": "$9,168,746",
+    "Average Salary": "$78,702",
+    "FTE Count": 117
+  },
+  {
+    "District Name": "Andover",
+    "Year": 2016,
+    "District Code": 90000,
+    "Salary Totals": "$38,327,763",
+    "Average Salary": "$81,653",
+    "FTE Count": 469
+  },
+  {
+    "District Name": "Arlington",
+    "Year": 2016,
+    "District Code": 100000,
+    "Salary Totals": "$26,619,396",
+    "Average Salary": "$69,794",
+    "FTE Count": 381
+  },
+  {
+    "District Name": "Ashburnham-Westminster",
+    "Year": 2016,
+    "District Code": 6100000,
+    "Salary Totals": "$11,119,937",
+    "Average Salary": "$70,290",
+    "FTE Count": 158
+  },
+  {
+    "District Name": "Ashland",
+    "Year": 2016,
+    "District Code": 140000,
+    "Salary Totals": "$14,464,647",
+    "Average Salary": "$76,899",
+    "FTE Count": 188
+  },
+  {
+    "District Name": "Assabet Valley Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8010000,
+    "Salary Totals": "$8,686,073",
+    "Average Salary": "$78,750",
+    "FTE Count": 110
+  },
+  {
+    "District Name": "Athol-Royalston",
+    "Year": 2016,
+    "District Code": 6150000,
+    "Salary Totals": "$6,611,835",
+    "Average Salary": "$65,205",
+    "FTE Count": 101
+  },
+  {
+    "District Name": "Attleboro",
+    "Year": 2016,
+    "District Code": 160000,
+    "Salary Totals": "$30,932,044",
+    "Average Salary": "$78,989",
+    "FTE Count": 392
+  },
+  {
+    "District Name": "Auburn",
+    "Year": 2016,
+    "District Code": 170000,
+    "Salary Totals": "$12,056,719",
+    "Average Salary": "$68,465",
+    "FTE Count": 176
+  },
+  {
+    "District Name": "Avon",
+    "Year": 2016,
+    "District Code": 180000,
+    "Salary Totals": "$4,459,922",
+    "Average Salary": "$67,780",
+    "FTE Count": 66
+  },
+  {
+    "District Name": "Ayer Shirley School District",
+    "Year": 2016,
+    "District Code": 6160000,
+    "Salary Totals": "$8,319,846",
+    "Average Salary": "$68,154",
+    "FTE Count": 122
+  },
+  {
+    "District Name": "Barnstable",
+    "Year": 2016,
+    "District Code": 200000,
+    "Salary Totals": "$28,240,747",
+    "Average Salary": "$76,511",
+    "FTE Count": 369
+  },
+  {
+    "District Name": "Bedford",
+    "Year": 2016,
+    "District Code": 230000,
+    "Salary Totals": "$18,992,213",
+    "Average Salary": "$85,551",
+    "FTE Count": 222
+  },
+  {
+    "District Name": "Belchertown",
+    "Year": 2016,
+    "District Code": 240000,
+    "Salary Totals": "$10,912,638",
+    "Average Salary": "$63,188",
+    "FTE Count": 173
+  },
+  {
+    "District Name": "Bellingham",
+    "Year": 2016,
+    "District Code": 250000,
+    "Salary Totals": "$11,921,547",
+    "Average Salary": "$76,176",
+    "FTE Count": 157
+  },
+  {
+    "District Name": "Belmont",
+    "Year": 2016,
+    "District Code": 260000,
+    "Salary Totals": "$22,257,855",
+    "Average Salary": "$85,279",
+    "FTE Count": 261
+  },
+  {
+    "District Name": "Berkley",
+    "Year": 2016,
+    "District Code": 270000,
+    "Salary Totals": "$4,521,073",
+    "Average Salary": "$75,101",
+    "FTE Count": 60
+  },
+  {
+    "District Name": "Berkshire Hills",
+    "Year": 2016,
+    "District Code": 6180000,
+    "Salary Totals": "$8,255,692",
+    "Average Salary": "$72,737",
+    "FTE Count": 114
+  },
+  {
+    "District Name": "Berlin",
+    "Year": 2016,
+    "District Code": 280000,
+    "Salary Totals": "$1,300,964",
+    "Average Salary": "$79,814",
+    "FTE Count": 16
+  },
+  {
+    "District Name": "Berlin-Boylston",
+    "Year": 2016,
+    "District Code": 6200000,
+    "Salary Totals": "$3,105,122",
+    "Average Salary": "$69,778",
+    "FTE Count": 45
+  },
+  {
+    "District Name": "Beverly",
+    "Year": 2016,
+    "District Code": 300000,
+    "Salary Totals": "$22,831,118",
+    "Average Salary": "$73,530",
+    "FTE Count": 311
+  },
+  {
+    "District Name": "Billerica",
+    "Year": 2016,
+    "District Code": 310000,
+    "Salary Totals": "$30,173,624",
+    "Average Salary": "$80,142",
+    "FTE Count": 377
+  },
+  {
+    "District Name": "Blackstone Valley Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8050000,
+    "Salary Totals": "$7,563,689",
+    "Average Salary": "$80,294",
+    "FTE Count": 94
+  },
+  {
+    "District Name": "Blackstone-Millville",
+    "Year": 2016,
+    "District Code": 6220000,
+    "Salary Totals": "$8,385,779",
+    "Average Salary": "$60,547",
+    "FTE Count": 139
+  },
+  {
+    "District Name": "Blue Hills Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8060000,
+    "Salary Totals": "$6,405,107",
+    "Average Salary": "$76,708",
+    "FTE Count": 84
+  },
+  {
+    "District Name": "Boston",
+    "Year": 2016,
+    "District Code": 350000,
+    "Salary Totals": "$391,799,784",
+    "Average Salary": "$90,626",
+    "FTE Count": "4,323"
+  },
+  {
+    "District Name": "Bourne",
+    "Year": 2016,
+    "District Code": 360000,
+    "Salary Totals": "$11,660,453",
+    "Average Salary": "$79,269",
+    "FTE Count": 147
+  },
+  {
+    "District Name": "Boxford",
+    "Year": 2016,
+    "District Code": 380000,
+    "Salary Totals": "$5,001,980",
+    "Average Salary": "$79,523",
+    "FTE Count": 63
+  },
+  {
+    "District Name": "Boylston",
+    "Year": 2016,
+    "District Code": 390000,
+    "Salary Totals": "$1,597,746",
+    "Average Salary": "$74,314",
+    "FTE Count": 22
+  },
+  {
+    "District Name": "Braintree",
+    "Year": 2016,
+    "District Code": 400000,
+    "Salary Totals": "$31,691,855",
+    "Average Salary": "$73,891",
+    "FTE Count": 429
+  },
+  {
+    "District Name": "Brewster",
+    "Year": 2016,
+    "District Code": 410000,
+    "Salary Totals": "$3,414,039",
+    "Average Salary": "$75,868",
+    "FTE Count": 45
+  },
+  {
+    "District Name": "Bridgewater-Raynham",
+    "Year": 2016,
+    "District Code": 6250000,
+    "Salary Totals": "$26,779,838",
+    "Average Salary": "$79,868",
+    "FTE Count": 335
+  },
+  {
+    "District Name": "Brimfield",
+    "Year": 2016,
+    "District Code": 430000,
+    "Salary Totals": "$1,841,401",
+    "Average Salary": "$69,226",
+    "FTE Count": 27
+  },
+  {
+    "District Name": "Bristol County Agricultural",
+    "Year": 2016,
+    "District Code": 9100000,
+    "Salary Totals": "$2,290,115",
+    "Average Salary": "$66,962",
+    "FTE Count": 34
+  },
+  {
+    "District Name": "Bristol-Plymouth Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8100000,
+    "Salary Totals": "$8,940,007",
+    "Average Salary": "$85,550",
+    "FTE Count": 105
+  },
+  {
+    "District Name": "Brockton",
+    "Year": 2016,
+    "District Code": 440000,
+    "Salary Totals": "$91,526,588",
+    "Average Salary": "$84,286",
+    "FTE Count": "1,086"
+  },
+  {
+    "District Name": "Brookfield",
+    "Year": 2016,
+    "District Code": 450000,
+    "Salary Totals": "$1,573,957",
+    "Average Salary": "$64,772",
+    "FTE Count": 24
+  },
+  {
+    "District Name": "Brookline",
+    "Year": 2016,
+    "District Code": 460000,
+    "Salary Totals": "$56,142,695",
+    "Average Salary": "$93,727",
+    "FTE Count": 599
+  },
+  {
+    "District Name": "Burlington",
+    "Year": 2016,
+    "District Code": 480000,
+    "Salary Totals": "$29,737,101",
+    "Average Salary": "$94,982",
+    "FTE Count": 313
+  },
+  {
+    "District Name": "Cambridge",
+    "Year": 2016,
+    "District Code": 490000,
+    "Salary Totals": "$54,449,757",
+    "Average Salary": "$82,409",
+    "FTE Count": 661
+  },
+  {
+    "District Name": "Canton",
+    "Year": 2016,
+    "District Code": 500000,
+    "Salary Totals": "$19,709,158",
+    "Average Salary": "$80,870",
+    "FTE Count": 244
+  },
+  {
+    "District Name": "Cape Cod Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8150000,
+    "Salary Totals": "$4,952,829",
+    "Average Salary": "$72,516",
+    "FTE Count": 68
+  },
+  {
+    "District Name": "Carlisle",
+    "Year": 2016,
+    "District Code": 510000,
+    "Salary Totals": "$5,423,187",
+    "Average Salary": "$100,803",
+    "FTE Count": 54
+  },
+  {
+    "District Name": "Carver",
+    "Year": 2016,
+    "District Code": 520000,
+    "Salary Totals": "$8,756,627",
+    "Average Salary": "$67,255",
+    "FTE Count": 130
+  },
+  {
+    "District Name": "Central Berkshire",
+    "Year": 2016,
+    "District Code": 6350000,
+    "Salary Totals": "$9,102,413",
+    "Average Salary": "$69,167",
+    "FTE Count": 132
+  },
+  {
+    "District Name": "Chelmsford",
+    "Year": 2016,
+    "District Code": 560000,
+    "Salary Totals": "$27,060,165",
+    "Average Salary": "$73,874",
+    "FTE Count": 366
+  },
+  {
+    "District Name": "Chelsea",
+    "Year": 2016,
+    "District Code": 570000,
+    "Salary Totals": "$28,155,659",
+    "Average Salary": "$66,342",
+    "FTE Count": 424
+  },
+  {
+    "District Name": "Chesterfield-Goshen",
+    "Year": 2016,
+    "District Code": 6320000,
+    "Salary Totals": "$1,008,465",
+    "Average Salary": "$63,827",
+    "FTE Count": 16
+  },
+  {
+    "District Name": "Chicopee",
+    "Year": 2016,
+    "District Code": 610000,
+    "Salary Totals": "$42,631,786",
+    "Average Salary": "$66,467",
+    "FTE Count": 641
+  },
+  {
+    "District Name": "Clarksburg",
+    "Year": 2016,
+    "District Code": 630000,
+    "Salary Totals": "$961,978",
+    "Average Salary": "$64,132",
+    "FTE Count": 15
+  },
+  {
+    "District Name": "Clinton",
+    "Year": 2016,
+    "District Code": 640000,
+    "Salary Totals": "$9,543,100",
+    "Average Salary": "$66,410",
+    "FTE Count": 144
+  },
+  {
+    "District Name": "Cohasset",
+    "Year": 2016,
+    "District Code": 650000,
+    "Salary Totals": "$9,764,547",
+    "Average Salary": "$80,832",
+    "FTE Count": 121
+  },
+  {
+    "District Name": "Concord",
+    "Year": 2016,
+    "District Code": 670000,
+    "Salary Totals": "$15,537,242",
+    "Average Salary": "$95,732",
+    "FTE Count": 162
+  },
+  {
+    "District Name": "Concord-Carlisle",
+    "Year": 2016,
+    "District Code": 6400000,
+    "Salary Totals": "$9,582,276",
+    "Average Salary": "$97,978",
+    "FTE Count": 98
+  },
+  {
+    "District Name": "Conway",
+    "Year": 2016,
+    "District Code": 680000,
+    "Salary Totals": "$796,751",
+    "Average Salary": "$68,685",
+    "FTE Count": 12
+  },
+  {
+    "District Name": "Danvers",
+    "Year": 2016,
+    "District Code": 710000,
+    "Salary Totals": "$22,234,367",
+    "Average Salary": "$80,735",
+    "FTE Count": 275
+  },
+  {
+    "District Name": "Dartmouth",
+    "Year": 2016,
+    "District Code": 720000,
+    "Salary Totals": "$20,514,152",
+    "Average Salary": "$66,282",
+    "FTE Count": 310
+  },
+  {
+    "District Name": "Dedham",
+    "Year": 2016,
+    "District Code": 730000,
+    "Salary Totals": "$18,356,448",
+    "Average Salary": "$78,480",
+    "FTE Count": 234
+  },
+  {
+    "District Name": "Deerfield",
+    "Year": 2016,
+    "District Code": 740000,
+    "Salary Totals": "$2,351,288",
+    "Average Salary": "$64,596",
+    "FTE Count": 36
+  },
+  {
+    "District Name": "Dennis-Yarmouth",
+    "Year": 2016,
+    "District Code": 6450000,
+    "Salary Totals": "$20,163,454",
+    "Average Salary": "$68,351",
+    "FTE Count": 295
+  },
+  {
+    "District Name": "Dighton-Rehoboth",
+    "Year": 2016,
+    "District Code": 6500000,
+    "Salary Totals": "$15,720,965",
+    "Average Salary": "$70,120",
+    "FTE Count": 224
+  },
+  {
+    "District Name": "Douglas",
+    "Year": 2016,
+    "District Code": 770000,
+    "Salary Totals": "$6,221,055",
+    "Average Salary": "$69,277",
+    "FTE Count": 90
+  },
+  {
+    "District Name": "Dover",
+    "Year": 2016,
+    "District Code": 780000,
+    "Salary Totals": "$3,529,309",
+    "Average Salary": "$96,429",
+    "FTE Count": 37
+  },
+  {
+    "District Name": "Dover-Sherborn",
+    "Year": 2016,
+    "District Code": 6550000,
+    "Salary Totals": "$9,969,511",
+    "Average Salary": "$92,652",
+    "FTE Count": 108
+  },
+  {
+    "District Name": "Dracut",
+    "Year": 2016,
+    "District Code": 790000,
+    "Salary Totals": "$15,451,696",
+    "Average Salary": "$71,835",
+    "FTE Count": 215
+  },
+  {
+    "District Name": "Dudley-Charlton Reg",
+    "Year": 2016,
+    "District Code": 6580000,
+    "Salary Totals": "$18,544,661",
+    "Average Salary": "$69,300",
+    "FTE Count": 268
+  },
+  {
+    "District Name": "Duxbury",
+    "Year": 2016,
+    "District Code": 820000,
+    "Salary Totals": "$18,099,623",
+    "Average Salary": "$75,040",
+    "FTE Count": 241
+  },
+  {
+    "District Name": "East Bridgewater",
+    "Year": 2016,
+    "District Code": 830000,
+    "Salary Totals": "$9,657,287",
+    "Average Salary": "$72,393",
+    "FTE Count": 133
+  },
+  {
+    "District Name": "East Longmeadow",
+    "Year": 2016,
+    "District Code": 870000,
+    "Salary Totals": "$15,018,418",
+    "Average Salary": "$72,728",
+    "FTE Count": 207
+  },
+  {
+    "District Name": "Eastham",
+    "Year": 2016,
+    "District Code": 850000,
+    "Salary Totals": "$1,898,608",
+    "Average Salary": "$80,792",
+    "FTE Count": 24
+  },
+  {
+    "District Name": "Easthampton",
+    "Year": 2016,
+    "District Code": 860000,
+    "Salary Totals": "$7,318,275",
+    "Average Salary": "$66,469",
+    "FTE Count": 110
+  },
+  {
+    "District Name": "Easton",
+    "Year": 2016,
+    "District Code": 880000,
+    "Salary Totals": "$19,685,039",
+    "Average Salary": "$74,227",
+    "FTE Count": 265
+  },
+  {
+    "District Name": "Edgartown",
+    "Year": 2016,
+    "District Code": 890000,
+    "Salary Totals": "$3,596,078",
+    "Average Salary": "$88,139",
+    "FTE Count": 41
+  },
+  {
+    "District Name": "Erving",
+    "Year": 2016,
+    "District Code": 910000,
+    "Salary Totals": "$1,223,444",
+    "Average Salary": "$75,990",
+    "FTE Count": 16
+  },
+  {
+    "District Name":
+      "Essex North Shore Agricultural and Technical School District",
+    "Year": 2016,
+    "District Code": 8170000,
+    "Salary Totals": "$7,830,797",
+    "Average Salary": "$72,507",
+    "FTE Count": 108
+  },
+  {
+    "District Name": "Everett",
+    "Year": 2016,
+    "District Code": 930000,
+    "Salary Totals": "$41,665,324",
+    "Average Salary": "$79,227",
+    "FTE Count": 526
+  },
+  {
+    "District Name": "Fairhaven",
+    "Year": 2016,
+    "District Code": 940000,
+    "Salary Totals": "$9,523,958",
+    "Average Salary": "$67,165",
+    "FTE Count": 142
+  },
+  {
+    "District Name": "Fall River",
+    "Year": 2016,
+    "District Code": 950000,
+    "Salary Totals": "$49,756,821",
+    "Average Salary": "$69,591",
+    "FTE Count": 715
+  },
+  {
+    "District Name": "Falmouth",
+    "Year": 2016,
+    "District Code": 960000,
+    "Salary Totals": "$22,388,260",
+    "Average Salary": "$74,775",
+    "FTE Count": 299
+  },
+  {
+    "District Name": "Farmington River Reg",
+    "Year": 2016,
+    "District Code": 6620000,
+    "Salary Totals": "$800,936",
+    "Average Salary": "$59,329",
+    "FTE Count": 14
+  },
+  {
+    "District Name": "Fitchburg",
+    "Year": 2016,
+    "District Code": 970000,
+    "Salary Totals": "$25,944,826",
+    "Average Salary": "$72,736",
+    "FTE Count": 357
+  },
+  {
+    "District Name": "Florida",
+    "Year": 2016,
+    "District Code": 980000,
+    "Salary Totals": "$522,236",
+    "Average Salary": "$44,257",
+    "FTE Count": 12
+  },
+  {
+    "District Name": "Foxborough",
+    "Year": 2016,
+    "District Code": 990000,
+    "Salary Totals": "$17,464,196",
+    "Average Salary": "$82,651",
+    "FTE Count": 211
+  },
+  {
+    "District Name": "Framingham",
+    "Year": 2016,
+    "District Code": 1000000,
+    "Salary Totals": "$56,397,617",
+    "Average Salary": "$76,898",
+    "FTE Count": 733
+  },
+  {
+    "District Name": "Franklin",
+    "Year": 2016,
+    "District Code": 1010000,
+    "Salary Totals": "$31,397,705",
+    "Average Salary": "$76,208",
+    "FTE Count": 412
+  },
+  {
+    "District Name": "Franklin County Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8180000,
+    "Salary Totals": "$3,975,523",
+    "Average Salary": "$71,890",
+    "FTE Count": 55
+  },
+  {
+    "District Name": "Freetown-Lakeville",
+    "Year": 2016,
+    "District Code": 6650000,
+    "Salary Totals": "$13,263,884",
+    "Average Salary": "$69,336",
+    "FTE Count": 191
+  },
+  {
+    "District Name": "Frontier",
+    "Year": 2016,
+    "District Code": 6700000,
+    "Salary Totals": "$3,426,386",
+    "Average Salary": "$66,019",
+    "FTE Count": 52
+  },
+  {
+    "District Name": "Gardner",
+    "Year": 2016,
+    "District Code": 1030000,
+    "Salary Totals": "$11,948,464",
+    "Average Salary": "$65,977",
+    "FTE Count": 181
+  },
+  {
+    "District Name": "Gateway",
+    "Year": 2016,
+    "District Code": 6720000,
+    "Salary Totals": "$4,909,756",
+    "Average Salary": "$59,440",
+    "FTE Count": 83
+  },
+  {
+    "District Name": "Georgetown",
+    "Year": 2016,
+    "District Code": 1050000,
+    "Salary Totals": "$7,432,647",
+    "Average Salary": "$69,594",
+    "FTE Count": 107
+  },
+  {
+    "District Name": "Gill-Montague",
+    "Year": 2016,
+    "District Code": 6740000,
+    "Salary Totals": "$5,208,901",
+    "Average Salary": "$58,330",
+    "FTE Count": 89
+  },
+  {
+    "District Name": "Gloucester",
+    "Year": 2016,
+    "District Code": 1070000,
+    "Salary Totals": "$19,448,137",
+    "Average Salary": "$74,743",
+    "FTE Count": 260
+  },
+  {
+    "District Name": "Gosnold",
+    "Year": 2016,
+    "District Code": 1090000,
+    "Salary Totals": "$50,225",
+    "Average Salary": "$45,659",
+    "FTE Count": 1
+  },
+  {
+    "District Name": "Grafton",
+    "Year": 2016,
+    "District Code": 1100000,
+    "Salary Totals": "$16,350,764",
+    "Average Salary": "$73,300",
+    "FTE Count": 223
+  },
+  {
+    "District Name": "Granby",
+    "Year": 2016,
+    "District Code": 1110000,
+    "Salary Totals": "$4,224,113",
+    "Average Salary": "$64,294",
+    "FTE Count": 66
+  },
+  {
+    "District Name": "Greater Fall River Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8210000,
+    "Salary Totals": "$11,166,331",
+    "Average Salary": "$79,250",
+    "FTE Count": 141
+  },
+  {
+    "District Name": "Greater Lawrence Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8230000,
+    "Salary Totals": "$10,891,707",
+    "Average Salary": "$83,206",
+    "FTE Count": 131
+  },
+  {
+    "District Name": "Greater Lowell Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8280000,
+    "Salary Totals": "$15,303,584",
+    "Average Salary": "$83,577",
+    "FTE Count": 183
+  },
+  {
+    "District Name": "Greater New Bedford Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8250000,
+    "Salary Totals": "$15,938,850",
+    "Average Salary": "$90,408",
+    "FTE Count": 176
+  },
+  {
+    "District Name": "Greenfield",
+    "Year": 2016,
+    "District Code": 1140000,
+    "Salary Totals": "$9,799,125",
+    "Average Salary": "$61,206",
+    "FTE Count": 160
+  },
+  {
+    "District Name": "Groton-Dunstable",
+    "Year": 2016,
+    "District Code": 6730000,
+    "Salary Totals": "$13,424,416",
+    "Average Salary": "$78,414",
+    "FTE Count": 171
+  },
+  {
+    "District Name": "Hadley",
+    "Year": 2016,
+    "District Code": 1170000,
+    "Salary Totals": "$3,240,587",
+    "Average Salary": "$64,425",
+    "FTE Count": 50
+  },
+  {
+    "District Name": "Halifax",
+    "Year": 2016,
+    "District Code": 1180000,
+    "Salary Totals": "$3,095,592",
+    "Average Salary": "$79,989",
+    "FTE Count": 39
+  },
+  {
+    "District Name": "Hamilton-Wenham",
+    "Year": 2016,
+    "District Code": 6750000,
+    "Salary Totals": "$11,456,903",
+    "Average Salary": "$77,047",
+    "FTE Count": 149
+  },
+  {
+    "District Name": "Hampden-Wilbraham",
+    "Year": 2016,
+    "District Code": 6800000,
+    "Salary Totals": "$16,055,449",
+    "Average Salary": "$74,503",
+    "FTE Count": 216
+  },
+  {
+    "District Name": "Hampshire",
+    "Year": 2016,
+    "District Code": 6830000,
+    "Salary Totals": "$4,937,763",
+    "Average Salary": "$71,252",
+    "FTE Count": 69
+  },
+  {
+    "District Name": "Hancock",
+    "Year": 2016,
+    "District Code": 1210000,
+    "Salary Totals": "$340,978",
+    "Average Salary": "$56,830",
+    "FTE Count": 6
+  },
+  {
+    "District Name": "Hanover",
+    "Year": 2016,
+    "District Code": 1220000,
+    "Salary Totals": "$16,046,856",
+    "Average Salary": "$76,595",
+    "FTE Count": 210
+  },
+  {
+    "District Name": "Harvard",
+    "Year": 2016,
+    "District Code": 1250000,
+    "Salary Totals": "$7,389,387",
+    "Average Salary": "$86,023",
+    "FTE Count": 86
+  },
+  {
+    "District Name": "Hatfield",
+    "Year": 2016,
+    "District Code": 1270000,
+    "Salary Totals": "$2,510,729",
+    "Average Salary": "$60,646",
+    "FTE Count": 41
+  },
+  {
+    "District Name": "Haverhill",
+    "Year": 2016,
+    "District Code": 1280000,
+    "Salary Totals": "$34,467,532",
+    "Average Salary": "$72,472",
+    "FTE Count": 476
+  },
+  {
+    "District Name": "Hawlemont",
+    "Year": 2016,
+    "District Code": 6850000,
+    "Salary Totals": "$545,944",
+    "Average Salary": "$55,709",
+    "FTE Count": 10
+  },
+  {
+    "District Name": "Hingham",
+    "Year": 2016,
+    "District Code": 1310000,
+    "Salary Totals": "$23,999,483",
+    "Average Salary": "$79,812",
+    "FTE Count": 301
+  },
+  {
+    "District Name": "Holbrook",
+    "Year": 2016,
+    "District Code": 1330000,
+    "Salary Totals": "$5,758,096",
+    "Average Salary": "$65,359",
+    "FTE Count": 88
+  },
+  {
+    "District Name": "Holland",
+    "Year": 2016,
+    "District Code": 1350000,
+    "Salary Totals": "$1,202,159",
+    "Average Salary": "$64,632",
+    "FTE Count": 19
+  },
+  {
+    "District Name": "Holliston",
+    "Year": 2016,
+    "District Code": 1360000,
+    "Salary Totals": "$16,538,195",
+    "Average Salary": "$78,566",
+    "FTE Count": 211
+  },
+  {
+    "District Name": "Holyoke",
+    "Year": 2016,
+    "District Code": 1370000,
+    "Salary Totals": "$27,063,648",
+    "Average Salary": "$62,575",
+    "FTE Count": 433
+  },
+  {
+    "District Name": "Hopedale",
+    "Year": 2016,
+    "District Code": 1380000,
+    "Salary Totals": "$5,767,956",
+    "Average Salary": "$64,303",
+    "FTE Count": 90
+  },
+  {
+    "District Name": "Hopkinton",
+    "Year": 2016,
+    "District Code": 1390000,
+    "Salary Totals": "$21,627,352",
+    "Average Salary": "$84,350",
+    "FTE Count": 256
+  },
+  {
+    "District Name": "Hudson",
+    "Year": 2016,
+    "District Code": 1410000,
+    "Salary Totals": "$17,886,956",
+    "Average Salary": "$74,710",
+    "FTE Count": 239
+  },
+  {
+    "District Name": "Hull",
+    "Year": 2016,
+    "District Code": 1420000,
+    "Salary Totals": "$7,122,167",
+    "Average Salary": "$83,594",
+    "FTE Count": 85
+  },
+  {
+    "District Name": "Ipswich",
+    "Year": 2016,
+    "District Code": 1440000,
+    "Salary Totals": "$10,884,303",
+    "Average Salary": "$68,584",
+    "FTE Count": 159
+  },
+  {
+    "District Name": "King Philip",
+    "Year": 2016,
+    "District Code": 6900000,
+    "Salary Totals": "$9,334,179",
+    "Average Salary": "$72,079",
+    "FTE Count": 130
+  },
+  {
+    "District Name": "Kingston",
+    "Year": 2016,
+    "District Code": 1450000,
+    "Salary Totals": "$4,609,806",
+    "Average Salary": "$72,141",
+    "FTE Count": 64
+  },
+  {
+    "District Name": "Lanesborough",
+    "Year": 2016,
+    "District Code": 1480000,
+    "Salary Totals": "$1,136,915",
+    "Average Salary": "$70,616",
+    "FTE Count": 16
+  },
+  {
+    "District Name": "Lawrence",
+    "Year": 2016,
+    "District Code": 1490000,
+    "Salary Totals": "$72,982,375",
+    "Average Salary": "$68,851",
+    "FTE Count": "1,060"
+  },
+  {
+    "District Name": "Lee",
+    "Year": 2016,
+    "District Code": 1500000,
+    "Salary Totals": "$4,620,981",
+    "Average Salary": "$64,629",
+    "FTE Count": 72
+  },
+  {
+    "District Name": "Leicester",
+    "Year": 2016,
+    "District Code": 1510000,
+    "Salary Totals": "$7,831,205",
+    "Average Salary": "$74,797",
+    "FTE Count": 105
+  },
+  {
+    "District Name": "Lenox",
+    "Year": 2016,
+    "District Code": 1520000,
+    "Salary Totals": "$5,756,691",
+    "Average Salary": "$72,502",
+    "FTE Count": 79
+  },
+  {
+    "District Name": "Leominster",
+    "Year": 2016,
+    "District Code": 1530000,
+    "Salary Totals": "$31,121,902",
+    "Average Salary": "$61,264",
+    "FTE Count": 508
+  },
+  {
+    "District Name": "Leverett",
+    "Year": 2016,
+    "District Code": 1540000,
+    "Salary Totals": "$939,864",
+    "Average Salary": "$55,613",
+    "FTE Count": 17
+  },
+  {
+    "District Name": "Lexington",
+    "Year": 2016,
+    "District Code": 1550000,
+    "Salary Totals": "$45,296,096",
+    "Average Salary": "$78,776",
+    "FTE Count": 575
+  },
+  {
+    "District Name": "Lincoln",
+    "Year": 2016,
+    "District Code": 1570000,
+    "Salary Totals": "$10,636,251",
+    "Average Salary": "$89,757",
+    "FTE Count": 119
+  },
+  {
+    "District Name": "Lincoln-Sudbury",
+    "Year": 2016,
+    "District Code": 6950000,
+    "Salary Totals": "$11,588,846",
+    "Average Salary": "$92,859",
+    "FTE Count": 125
+  },
+  {
+    "District Name": "Littleton",
+    "Year": 2016,
+    "District Code": 1580000,
+    "Salary Totals": "$8,292,410",
+    "Average Salary": "$72,868",
+    "FTE Count": 114
+  },
+  {
+    "District Name": "Longmeadow",
+    "Year": 2016,
+    "District Code": 1590000,
+    "Salary Totals": "$17,069,885",
+    "Average Salary": "$71,752",
+    "FTE Count": 238
+  },
+  {
+    "District Name": "Lowell",
+    "Year": 2016,
+    "District Code": 1600000,
+    "Salary Totals": "$80,861,650",
+    "Average Salary": "$79,547",
+    "FTE Count": "1,017"
+  },
+  {
+    "District Name": "Ludlow",
+    "Year": 2016,
+    "District Code": 1610000,
+    "Salary Totals": "$14,396,361",
+    "Average Salary": "$62,457",
+    "FTE Count": 231
+  },
+  {
+    "District Name": "Lunenburg",
+    "Year": 2016,
+    "District Code": 1620000,
+    "Salary Totals": "$7,972,611",
+    "Average Salary": "$76,147",
+    "FTE Count": 105
+  },
+  {
+    "District Name": "Lynn",
+    "Year": 2016,
+    "District Code": 1630000,
+    "Salary Totals": "$78,105,105",
+    "Average Salary": "$73,256",
+    "FTE Count": "1,066"
+  },
+  {
+    "District Name": "Lynnfield",
+    "Year": 2016,
+    "District Code": 1640000,
+    "Salary Totals": "$13,688,426",
+    "Average Salary": "$84,444",
+    "FTE Count": 162
+  },
+  {
+    "District Name": "Malden",
+    "Year": 2016,
+    "District Code": 1650000,
+    "Salary Totals": "$38,223,586",
+    "Average Salary": "$83,403",
+    "FTE Count": 458
+  },
+  {
+    "District Name": "Manchester Essex Regional",
+    "Year": 2016,
+    "District Code": 6980000,
+    "Salary Totals": "$9,804,516",
+    "Average Salary": "$76,658",
+    "FTE Count": 128
+  },
+  {
+    "District Name": "Mansfield",
+    "Year": 2016,
+    "District Code": 1670000,
+    "Salary Totals": "$24,042,330",
+    "Average Salary": "$80,248",
+    "FTE Count": 300
+  },
+  {
+    "District Name": "Marblehead",
+    "Year": 2016,
+    "District Code": 1680000,
+    "Salary Totals": "$18,880,122",
+    "Average Salary": "$71,924",
+    "FTE Count": 263
+  },
+  {
+    "District Name": "Marion",
+    "Year": 2016,
+    "District Code": 1690000,
+    "Salary Totals": "$2,812,850",
+    "Average Salary": "$82,488",
+    "FTE Count": 34
+  },
+  {
+    "District Name": "Marlborough",
+    "Year": 2016,
+    "District Code": 1700000,
+    "Salary Totals": "$28,978,734",
+    "Average Salary": "$78,940",
+    "FTE Count": 367
+  },
+  {
+    "District Name": "Marshfield",
+    "Year": 2016,
+    "District Code": 1710000,
+    "Salary Totals": "$23,232,987",
+    "Average Salary": "$71,092",
+    "FTE Count": 327
+  },
+  {
+    "District Name": "Martha's Vineyard",
+    "Year": 2016,
+    "District Code": 7000000,
+    "Salary Totals": "$7,145,843",
+    "Average Salary": "$91,262",
+    "FTE Count": 78
+  },
+  {
+    "District Name": "Masconomet",
+    "Year": 2016,
+    "District Code": 7050000,
+    "Salary Totals": "$12,258,052",
+    "Average Salary": "$86,350",
+    "FTE Count": 142
+  },
+  {
+    "District Name": "Mashpee",
+    "Year": 2016,
+    "District Code": 1720000,
+    "Salary Totals": "$10,355,630",
+    "Average Salary": "$78,810",
+    "FTE Count": 131
+  },
+  {
+    "District Name": "Mattapoisett",
+    "Year": 2016,
+    "District Code": 1730000,
+    "Salary Totals": "$3,041,840",
+    "Average Salary": "$74,191",
+    "FTE Count": 41
+  },
+  {
+    "District Name": "Maynard",
+    "Year": 2016,
+    "District Code": 1740000,
+    "Salary Totals": "$7,618,758",
+    "Average Salary": "$73,398",
+    "FTE Count": 104
+  },
+  {
+    "District Name": "Medfield",
+    "Year": 2016,
+    "District Code": 1750000,
+    "Salary Totals": "$15,917,161",
+    "Average Salary": "$81,710",
+    "FTE Count": 195
+  },
+  {
+    "District Name": "Medford",
+    "Year": 2016,
+    "District Code": 1760000,
+    "Salary Totals": "$30,006,748",
+    "Average Salary": "$76,179",
+    "FTE Count": 394
+  },
+  {
+    "District Name": "Medway",
+    "Year": 2016,
+    "District Code": 1770000,
+    "Salary Totals": "$12,615,074",
+    "Average Salary": "$85,410",
+    "FTE Count": 148
+  },
+  {
+    "District Name": "Melrose",
+    "Year": 2016,
+    "District Code": 1780000,
+    "Salary Totals": "$16,573,142",
+    "Average Salary": "$63,645",
+    "FTE Count": 260
+  },
+  {
+    "District Name": "Mendon-Upton",
+    "Year": 2016,
+    "District Code": 7100000,
+    "Salary Totals": "$12,820,983",
+    "Average Salary": "$78,705",
+    "FTE Count": 163
+  },
+  {
+    "District Name": "Methuen",
+    "Year": 2016,
+    "District Code": 1810000,
+    "Salary Totals": "$38,207,107",
+    "Average Salary": "$79,565",
+    "FTE Count": 480
+  },
+  {
+    "District Name": "Middleborough",
+    "Year": 2016,
+    "District Code": 1820000,
+    "Salary Totals": "$16,026,345",
+    "Average Salary": "$71,133",
+    "FTE Count": 225
+  },
+  {
+    "District Name": "Middleton",
+    "Year": 2016,
+    "District Code": 1840000,
+    "Salary Totals": "$4,326,619",
+    "Average Salary": "$70,237",
+    "FTE Count": 62
+  },
+  {
+    "District Name": "Milford",
+    "Year": 2016,
+    "District Code": 1850000,
+    "Salary Totals": "$24,470,281",
+    "Average Salary": "$74,924",
+    "FTE Count": 327
+  },
+  {
+    "District Name": "Millbury",
+    "Year": 2016,
+    "District Code": 1860000,
+    "Salary Totals": "$10,042,553",
+    "Average Salary": "$75,339",
+    "FTE Count": 133
+  },
+  {
+    "District Name": "Millis",
+    "Year": 2016,
+    "District Code": 1870000,
+    "Salary Totals": "$7,432,012",
+    "Average Salary": "$74,694",
+    "FTE Count": 100
+  },
+  {
+    "District Name": "Milton",
+    "Year": 2016,
+    "District Code": 1890000,
+    "Salary Totals": "$23,608,214",
+    "Average Salary": "$81,165",
+    "FTE Count": 291
+  },
+  {
+    "District Name": "Minuteman Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8300000,
+    "Salary Totals": "$6,647,808",
+    "Average Salary": "$87,471",
+    "FTE Count": 76
+  },
+  {
+    "District Name": "Mohawk Trail",
+    "Year": 2016,
+    "District Code": 7170000,
+    "Salary Totals": "$5,399,287",
+    "Average Salary": "$78,047",
+    "FTE Count": 69
+  },
+  {
+    "District Name": "Monomoy Regional School District",
+    "Year": 2016,
+    "District Code": 7120000,
+    "Salary Totals": "$12,167,568",
+    "Average Salary": "$71,574",
+    "FTE Count": 170
+  },
+  {
+    "District Name": "Monson",
+    "Year": 2016,
+    "District Code": 1910000,
+    "Salary Totals": "$5,086,821",
+    "Average Salary": "$59,704",
+    "FTE Count": 85
+  },
+  {
+    "District Name": "Montachusett Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8320000,
+    "Salary Totals": "$8,826,043",
+    "Average Salary": "$78,107",
+    "FTE Count": 113
+  },
+  {
+    "District Name": "Mount Greylock",
+    "Year": 2016,
+    "District Code": 7150000,
+    "Salary Totals": "$3,632,181",
+    "Average Salary": "$79,132",
+    "FTE Count": 46
+  },
+  {
+    "District Name": "Nahant",
+    "Year": 2016,
+    "District Code": 1960000,
+    "Salary Totals": "$744,177",
+    "Average Salary": "$67,043",
+    "FTE Count": 11
+  },
+  {
+    "District Name": "Nantucket",
+    "Year": 2016,
+    "District Code": 1970000,
+    "Salary Totals": "$11,910,218",
+    "Average Salary": "$87,769",
+    "FTE Count": 136
+  },
+  {
+    "District Name": "Narragansett",
+    "Year": 2016,
+    "District Code": 7200000,
+    "Salary Totals": "$6,855,710",
+    "Average Salary": "$67,147",
+    "FTE Count": 102
+  },
+  {
+    "District Name": "Nashoba",
+    "Year": 2016,
+    "District Code": 7250000,
+    "Salary Totals": "$19,363,614",
+    "Average Salary": "$72,673",
+    "FTE Count": 266
+  },
+  {
+    "District Name": "Nashoba Valley Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8520000,
+    "Salary Totals": "$4,140,062",
+    "Average Salary": "$71,504",
+    "FTE Count": 58
+  },
+  {
+    "District Name": "Natick",
+    "Year": 2016,
+    "District Code": 1980000,
+    "Salary Totals": "$26,781,708",
+    "Average Salary": "$70,293",
+    "FTE Count": 381
+  },
+  {
+    "District Name": "Nauset",
+    "Year": 2016,
+    "District Code": 6600000,
+    "Salary Totals": "$11,211,977",
+    "Average Salary": "$83,113",
+    "FTE Count": 135
+  },
+  {
+    "District Name": "Needham",
+    "Year": 2016,
+    "District Code": 1990000,
+    "Salary Totals": "$34,871,958",
+    "Average Salary": "$89,622",
+    "FTE Count": 389
+  },
+  {
+    "District Name": "New Bedford",
+    "Year": 2016,
+    "District Code": 2010000,
+    "Salary Totals": "$64,991,047",
+    "Average Salary": "$77,287",
+    "FTE Count": 841
+  },
+  {
+    "District Name": "New Salem-Wendell",
+    "Year": 2016,
+    "District Code": 7280000,
+    "Salary Totals": "$695,734",
+    "Average Salary": "$55,659",
+    "FTE Count": 13
+  },
+  {
+    "District Name": "Newburyport",
+    "Year": 2016,
+    "District Code": 2040000,
+    "Salary Totals": "$14,518,278",
+    "Average Salary": "$77,930",
+    "FTE Count": 186
+  },
+  {
+    "District Name": "Newton",
+    "Year": 2016,
+    "District Code": 2070000,
+    "Salary Totals": "$85,263,597",
+    "Average Salary": "$78,209",
+    "FTE Count": "1,090"
+  },
+  {
+    "District Name": "Norfolk",
+    "Year": 2016,
+    "District Code": 2080000,
+    "Salary Totals": "$5,638,625",
+    "Average Salary": "$84,159",
+    "FTE Count": 67
+  },
+  {
+    "District Name": "Norfolk County Agricultural",
+    "Year": 2016,
+    "District Code": 9150000,
+    "Salary Totals": "$3,503,516",
+    "Average Salary": "$67,117",
+    "FTE Count": 52
+  },
+  {
+    "District Name": "North Adams",
+    "Year": 2016,
+    "District Code": 2090000,
+    "Salary Totals": "$7,061,497",
+    "Average Salary": "$56,267",
+    "FTE Count": 126
+  },
+  {
+    "District Name": "North Andover",
+    "Year": 2016,
+    "District Code": 2110000,
+    "Salary Totals": "$23,634,774",
+    "Average Salary": "$80,009",
+    "FTE Count": 295
+  },
+  {
+    "District Name": "North Attleborough",
+    "Year": 2016,
+    "District Code": 2120000,
+    "Salary Totals": "$20,985,334",
+    "Average Salary": "$74,761",
+    "FTE Count": 281
+  },
+  {
+    "District Name": "North Brookfield",
+    "Year": 2016,
+    "District Code": 2150000,
+    "Salary Totals": "$2,702,264",
+    "Average Salary": "$62,990",
+    "FTE Count": 43
+  },
+  {
+    "District Name": "North Middlesex",
+    "Year": 2016,
+    "District Code": 7350000,
+    "Salary Totals": "$16,400,012",
+    "Average Salary": "$65,809",
+    "FTE Count": 249
+  },
+  {
+    "District Name": "North Reading",
+    "Year": 2016,
+    "District Code": 2170000,
+    "Salary Totals": "$14,788,134",
+    "Average Salary": "$75,143",
+    "FTE Count": 197
+  },
+  {
+    "District Name": "Northampton",
+    "Year": 2016,
+    "District Code": 2100000,
+    "Salary Totals": "$13,462,103",
+    "Average Salary": "$61,387",
+    "FTE Count": 219
+  },
+  {
+    "District Name": "Northampton-Smith Vocational Agricultural",
+    "Year": 2016,
+    "District Code": 4060000,
+    "Salary Totals": "$3,166,123",
+    "Average Salary": "$60,654",
+    "FTE Count": 52
+  },
+  {
+    "District Name": "Northboro-Southboro",
+    "Year": 2016,
+    "District Code": 7300000,
+    "Salary Totals": "$9,482,556",
+    "Average Salary": "$86,916",
+    "FTE Count": 109
+  },
+  {
+    "District Name": "Northborough",
+    "Year": 2016,
+    "District Code": 2130000,
+    "Salary Totals": "$11,513,907",
+    "Average Salary": "$81,775",
+    "FTE Count": 141
+  },
+  {
+    "District Name": "Northbridge",
+    "Year": 2016,
+    "District Code": 2140000,
+    "Salary Totals": "$11,281,650",
+    "Average Salary": "$69,511",
+    "FTE Count": 162
+  },
+  {
+    "District Name": "Northeast Metropolitan Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8530000,
+    "Salary Totals": "$9,359,306",
+    "Average Salary": "$85,551",
+    "FTE Count": 109
+  },
+  {
+    "District Name": "Northern Berkshire Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8510000,
+    "Salary Totals": "$4,029,772",
+    "Average Salary": "$73,536",
+    "FTE Count": 55
+  },
+  {
+    "District Name": "Norton",
+    "Year": 2016,
+    "District Code": 2180000,
+    "Salary Totals": "$13,243,568",
+    "Average Salary": "$70,276",
+    "FTE Count": 188
+  },
+  {
+    "District Name": "Norwell",
+    "Year": 2016,
+    "District Code": 2190000,
+    "Salary Totals": "$13,344,825",
+    "Average Salary": "$80,829",
+    "FTE Count": 165
+  },
+  {
+    "District Name": "Norwood",
+    "Year": 2016,
+    "District Code": 2200000,
+    "Salary Totals": "$20,833,128",
+    "Average Salary": "$77,303",
+    "FTE Count": 270
+  },
+  {
+    "District Name": "Oak Bluffs",
+    "Year": 2016,
+    "District Code": 2210000,
+    "Salary Totals": "$3,687,120",
+    "Average Salary": "$79,981",
+    "FTE Count": 46
+  },
+  {
+    "District Name": "Old Colony Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8550000,
+    "Salary Totals": "$4,014,690",
+    "Average Salary": "$73,935",
+    "FTE Count": 54
+  },
+  {
+    "District Name": "Old Rochester",
+    "Year": 2016,
+    "District Code": 7400000,
+    "Salary Totals": "$7,282,444",
+    "Average Salary": "$82,102",
+    "FTE Count": 89
+  },
+  {
+    "District Name": "Orange",
+    "Year": 2016,
+    "District Code": 2230000,
+    "Salary Totals": "$2,863,097",
+    "Average Salary": "$63,203",
+    "FTE Count": 45
+  },
+  {
+    "District Name": "Orleans",
+    "Year": 2016,
+    "District Code": 2240000,
+    "Salary Totals": "$1,908,185",
+    "Average Salary": "$77,254",
+    "FTE Count": 25
+  },
+  {
+    "District Name": "Oxford",
+    "Year": 2016,
+    "District Code": 2260000,
+    "Salary Totals": "$8,419,275",
+    "Average Salary": "$65,114",
+    "FTE Count": 129
+  },
+  {
+    "District Name": "Palmer",
+    "Year": 2016,
+    "District Code": 2270000,
+    "Salary Totals": "$7,748,372",
+    "Average Salary": "$64,036",
+    "FTE Count": 121
+  },
+  {
+    "District Name": "Pathfinder Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8600000,
+    "Salary Totals": "$5,384,049",
+    "Average Salary": "$75,301",
+    "FTE Count": 72
+  },
+  {
+    "District Name": "Peabody",
+    "Year": 2016,
+    "District Code": 2290000,
+    "Salary Totals": "$35,285,651",
+    "Average Salary": "$78,605",
+    "FTE Count": 449
+  },
+  {
+    "District Name": "Pelham",
+    "Year": 2016,
+    "District Code": 2300000,
+    "Salary Totals": "$789,460",
+    "Average Salary": "$69,864",
+    "FTE Count": 11
+  },
+  {
+    "District Name": "Pembroke",
+    "Year": 2016,
+    "District Code": 2310000,
+    "Salary Totals": "$15,351,348",
+    "Average Salary": "$77,259",
+    "FTE Count": 199
+  },
+  {
+    "District Name": "Pentucket",
+    "Year": 2016,
+    "District Code": 7450000,
+    "Salary Totals": "$15,352,513",
+    "Average Salary": "$73,003",
+    "FTE Count": 210
+  },
+  {
+    "District Name": "Petersham",
+    "Year": 2016,
+    "District Code": 2340000,
+    "Salary Totals": "$649,170",
+    "Average Salary": "$64,274",
+    "FTE Count": 10
+  },
+  {
+    "District Name": "Pioneer Valley",
+    "Year": 2016,
+    "District Code": 7500000,
+    "Salary Totals": "$4,858,795",
+    "Average Salary": "$56,367",
+    "FTE Count": 86
+  },
+  {
+    "District Name": "Pittsfield",
+    "Year": 2016,
+    "District Code": 2360000,
+    "Salary Totals": "$32,623,123",
+    "Average Salary": "$70,460",
+    "FTE Count": 463
+  },
+  {
+    "District Name": "Plainville",
+    "Year": 2016,
+    "District Code": 2380000,
+    "Salary Totals": "$3,621,080",
+    "Average Salary": "$71,002",
+    "FTE Count": 51
+  },
+  {
+    "District Name": "Plymouth",
+    "Year": 2016,
+    "District Code": 2390000,
+    "Salary Totals": "$42,597,055",
+    "Average Salary": "$67,593",
+    "FTE Count": 630
+  },
+  {
+    "District Name": "Plympton",
+    "Year": 2016,
+    "District Code": 2400000,
+    "Salary Totals": "$1,194,169",
+    "Average Salary": "$69,027",
+    "FTE Count": 17
+  },
+  {
+    "District Name": "Provincetown",
+    "Year": 2016,
+    "District Code": 2420000,
+    "Salary Totals": "$1,501,220",
+    "Average Salary": "$77,382",
+    "FTE Count": 19
+  },
+  {
+    "District Name": "Quabbin",
+    "Year": 2016,
+    "District Code": 7530000,
+    "Salary Totals": "$12,187,104",
+    "Average Salary": "$75,136",
+    "FTE Count": 162
+  },
+  {
+    "District Name": "Quaboag Regional",
+    "Year": 2016,
+    "District Code": 7780000,
+    "Salary Totals": "$6,614,381",
+    "Average Salary": "$65,880",
+    "FTE Count": 100
+  },
+  {
+    "District Name": "Quincy",
+    "Year": 2016,
+    "District Code": 2430000,
+    "Salary Totals": "$55,590,293",
+    "Average Salary": "$80,894",
+    "FTE Count": 687
+  },
+  {
+    "District Name": "Ralph C Mahar",
+    "Year": 2016,
+    "District Code": 7550000,
+    "Salary Totals": "$4,200,739",
+    "Average Salary": "$63,841",
+    "FTE Count": 66
+  },
+  {
+    "District Name": "Randolph",
+    "Year": 2016,
+    "District Code": 2440000,
+    "Salary Totals": "$18,202,089",
+    "Average Salary": "$72,547",
+    "FTE Count": 251
+  },
+  {
+    "District Name": "Reading",
+    "Year": 2016,
+    "District Code": 2460000,
+    "Salary Totals": "$22,911,148",
+    "Average Salary": "$72,366",
+    "FTE Count": 317
+  },
+  {
+    "District Name": "Revere",
+    "Year": 2016,
+    "District Code": 2480000,
+    "Salary Totals": "$42,618,388",
+    "Average Salary": "$80,579",
+    "FTE Count": 529
+  },
+  {
+    "District Name": "Richmond",
+    "Year": 2016,
+    "District Code": 2490000,
+    "Salary Totals": "$1,342,120",
+    "Average Salary": "$72,941",
+    "FTE Count": 18
+  },
+  {
+    "District Name": "Rochester",
+    "Year": 2016,
+    "District Code": 2500000,
+    "Salary Totals": "$3,218,426",
+    "Average Salary": "$92,484",
+    "FTE Count": 35
+  },
+  {
+    "District Name": "Rockland",
+    "Year": 2016,
+    "District Code": 2510000,
+    "Salary Totals": "$11,011,066",
+    "Average Salary": "$74,500",
+    "FTE Count": 148
+  },
+  {
+    "District Name": "Rockport",
+    "Year": 2016,
+    "District Code": 2520000,
+    "Salary Totals": "$6,626,052",
+    "Average Salary": "$76,249",
+    "FTE Count": 87
+  },
+  {
+    "District Name": "Rowe",
+    "Year": 2016,
+    "District Code": 2530000,
+    "Salary Totals": "$557,522",
+    "Average Salary": "$68,830",
+    "FTE Count": 8
+  },
+  {
+    "District Name": "Salem",
+    "Year": 2016,
+    "District Code": 2580000,
+    "Salary Totals": "$32,461,940",
+    "Average Salary": "$85,224",
+    "FTE Count": 381
+  },
+  {
+    "District Name": "Sandwich",
+    "Year": 2016,
+    "District Code": 2610000,
+    "Salary Totals": "$16,765,211",
+    "Average Salary": "$77,617",
+    "FTE Count": 216
+  },
+  {
+    "District Name": "Saugus",
+    "Year": 2016,
+    "District Code": 2620000,
+    "Salary Totals": "$15,448,490",
+    "Average Salary": "$73,250",
+    "FTE Count": 211
+  },
+  {
+    "District Name": "Savoy",
+    "Year": 2016,
+    "District Code": 2630000,
+    "Salary Totals": "$229,311",
+    "Average Salary": "$48,790",
+    "FTE Count": 5
+  },
+  {
+    "District Name": "Scituate",
+    "Year": 2016,
+    "District Code": 2640000,
+    "Salary Totals": "$20,402,010",
+    "Average Salary": "$83,137",
+    "FTE Count": 245
+  },
+  {
+    "District Name": "Seekonk",
+    "Year": 2016,
+    "District Code": 2650000,
+    "Salary Totals": "$11,565,508",
+    "Average Salary": "$76,796",
+    "FTE Count": 151
+  },
+  {
+    "District Name": "Sharon",
+    "Year": 2016,
+    "District Code": 2660000,
+    "Salary Totals": "$21,404,982",
+    "Average Salary": "$79,739",
+    "FTE Count": 268
+  },
+  {
+    "District Name": "Shawsheen Valley Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8710000,
+    "Salary Totals": "$10,937,532",
+    "Average Salary": "$84,006",
+    "FTE Count": 130
+  },
+  {
+    "District Name": "Sherborn",
+    "Year": 2016,
+    "District Code": 2690000,
+    "Salary Totals": "$2,940,422",
+    "Average Salary": "$95,159",
+    "FTE Count": 31
+  },
+  {
+    "District Name": "Shrewsbury",
+    "Year": 2016,
+    "District Code": 2710000,
+    "Salary Totals": "$30,911,009",
+    "Average Salary": "$77,043",
+    "FTE Count": 401
+  },
+  {
+    "District Name": "Shutesbury",
+    "Year": 2016,
+    "District Code": 2720000,
+    "Salary Totals": "$866,894",
+    "Average Salary": "$58,972",
+    "FTE Count": 15
+  },
+  {
+    "District Name": "Silver Lake",
+    "Year": 2016,
+    "District Code": 7600000,
+    "Salary Totals": "$10,985,096",
+    "Average Salary": "$82,471",
+    "FTE Count": 133
+  },
+  {
+    "District Name": "Somerset",
+    "Year": 2016,
+    "District Code": 2730000,
+    "Salary Totals": "$9,139,582",
+    "Average Salary": "$73,763",
+    "FTE Count": 124
+  },
+  {
+    "District Name": "Somerset Berkley Regional School District",
+    "Year": 2016,
+    "District Code": 7630000,
+    "Salary Totals": "$5,320,794",
+    "Average Salary": "$62,968",
+    "FTE Count": 85
+  },
+  {
+    "District Name": "Somerville",
+    "Year": 2016,
+    "District Code": 2740000,
+    "Salary Totals": "$31,738,708",
+    "Average Salary": "$74,698",
+    "FTE Count": 425
+  },
+  {
+    "District Name": "South Hadley",
+    "Year": 2016,
+    "District Code": 2780000,
+    "Salary Totals": "$9,840,316",
+    "Average Salary": "$69,396",
+    "FTE Count": 142
+  },
+  {
+    "District Name": "South Middlesex Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8290000,
+    "Salary Totals": "$6,053,625",
+    "Average Salary": "$78,111",
+    "FTE Count": 78
+  },
+  {
+    "District Name": "South Shore Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8730000,
+    "Salary Totals": "$4,958,960",
+    "Average Salary": "$80,112",
+    "FTE Count": 62
+  },
+  {
+    "District Name": "Southampton",
+    "Year": 2016,
+    "District Code": 2750000,
+    "Salary Totals": "$2,531,542",
+    "Average Salary": "$69,357",
+    "FTE Count": 37
+  },
+  {
+    "District Name": "Southborough",
+    "Year": 2016,
+    "District Code": 2760000,
+    "Salary Totals": "$9,261,493",
+    "Average Salary": "$84,043",
+    "FTE Count": 110
+  },
+  {
+    "District Name": "Southbridge",
+    "Year": 2016,
+    "District Code": 2770000,
+    "Salary Totals": "$12,129,640",
+    "Average Salary": "$72,502",
+    "FTE Count": 167
+  },
+  {
+    "District Name": "Southeastern Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8720000,
+    "Salary Totals": "$10,123,304",
+    "Average Salary": "$80,922",
+    "FTE Count": 125
+  },
+  {
+    "District Name": "Southern Berkshire",
+    "Year": 2016,
+    "District Code": 7650000,
+    "Salary Totals": "$4,878,577",
+    "Average Salary": "$62,147",
+    "FTE Count": 79
+  },
+  {
+    "District Name": "Southern Worcester County Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8760000,
+    "Salary Totals": "$8,315,313",
+    "Average Salary": "$73,587",
+    "FTE Count": 113
+  },
+  {
+    "District Name": "Southwick-Tolland-Granville Regional School District",
+    "Year": 2016,
+    "District Code": 7660000,
+    "Salary Totals": "$9,021,396",
+    "Average Salary": "$63,846",
+    "FTE Count": 141
+  },
+  {
+    "District Name": "Spencer-E Brookfield",
+    "Year": 2016,
+    "District Code": 7670000,
+    "Salary Totals": "$7,202,402",
+    "Average Salary": "$63,401",
+    "FTE Count": 114
+  },
+  {
+    "District Name": "Springfield",
+    "Year": 2016,
+    "District Code": 2810000,
+    "Salary Totals": "$135,954,291",
+    "Average Salary": "$65,832",
+    "FTE Count": "2,065"
+  },
+  {
+    "District Name": "Stoneham",
+    "Year": 2016,
+    "District Code": 2840000,
+    "Salary Totals": "$13,338,311",
+    "Average Salary": "$71,442",
+    "FTE Count": 187
+  },
+  {
+    "District Name": "Stoughton",
+    "Year": 2016,
+    "District Code": 2850000,
+    "Salary Totals": "$24,566,042",
+    "Average Salary": "$81,832",
+    "FTE Count": 300
+  },
+  {
+    "District Name": "Sturbridge",
+    "Year": 2016,
+    "District Code": 2870000,
+    "Salary Totals": "$5,314,430",
+    "Average Salary": "$76,357",
+    "FTE Count": 70
+  },
+  {
+    "District Name": "Sudbury",
+    "Year": 2016,
+    "District Code": 2880000,
+    "Salary Totals": "$17,021,449",
+    "Average Salary": "$83,234",
+    "FTE Count": 205
+  },
+  {
+    "District Name": "Sunderland",
+    "Year": 2016,
+    "District Code": 2890000,
+    "Salary Totals": "$1,150,534",
+    "Average Salary": "$62,191",
+    "FTE Count": 19
+  },
+  {
+    "District Name": "Sutton",
+    "Year": 2016,
+    "District Code": 2900000,
+    "Salary Totals": "$7,204,778",
+    "Average Salary": "$71,689",
+    "FTE Count": 101
+  },
+  {
+    "District Name": "Swampscott",
+    "Year": 2016,
+    "District Code": 2910000,
+    "Salary Totals": "$14,707,396",
+    "Average Salary": "$77,776",
+    "FTE Count": 189
+  },
+  {
+    "District Name": "Swansea",
+    "Year": 2016,
+    "District Code": 2920000,
+    "Salary Totals": "$10,721,617",
+    "Average Salary": "$66,511",
+    "FTE Count": 161
+  },
+  {
+    "District Name": "Tantasqua",
+    "Year": 2016,
+    "District Code": 7700000,
+    "Salary Totals": "$10,905,485",
+    "Average Salary": "$78,911",
+    "FTE Count": 138
+  },
+  {
+    "District Name": "Taunton",
+    "Year": 2016,
+    "District Code": 2930000,
+    "Salary Totals": "$39,879,315",
+    "Average Salary": "$76,077",
+    "FTE Count": 524
+  },
+  {
+    "District Name": "Tewksbury",
+    "Year": 2016,
+    "District Code": 2950000,
+    "Salary Totals": "$18,868,593",
+    "Average Salary": "$74,727",
+    "FTE Count": 253
+  },
+  {
+    "District Name": "Tisbury",
+    "Year": 2016,
+    "District Code": 2960000,
+    "Salary Totals": "$3,151,361",
+    "Average Salary": "$84,942",
+    "FTE Count": 37
+  },
+  {
+    "District Name": "Topsfield",
+    "Year": 2016,
+    "District Code": 2980000,
+    "Salary Totals": "$3,564,385",
+    "Average Salary": "$69,077",
+    "FTE Count": 52
+  },
+  {
+    "District Name": "Tri County Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8780000,
+    "Salary Totals": "$7,428,177",
+    "Average Salary": "$79,531",
+    "FTE Count": 93
+  },
+  {
+    "District Name": "Triton",
+    "Year": 2016,
+    "District Code": 7730000,
+    "Salary Totals": "$16,898,037",
+    "Average Salary": "$80,200",
+    "FTE Count": 211
+  },
+  {
+    "District Name": "Truro",
+    "Year": 2016,
+    "District Code": 3000000,
+    "Salary Totals": "$1,126,924",
+    "Average Salary": "$70,876",
+    "FTE Count": 16
+  },
+  {
+    "District Name": "Tyngsborough",
+    "Year": 2016,
+    "District Code": 3010000,
+    "Salary Totals": "$9,765,442",
+    "Average Salary": "$74,205",
+    "FTE Count": 132
+  },
+  {
+    "District Name": "Up-Island Regional",
+    "Year": 2016,
+    "District Code": 7740000,
+    "Salary Totals": "$3,698,084",
+    "Average Salary": "$84,431",
+    "FTE Count": 44
+  },
+  {
+    "District Name": "Upper Cape Cod Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8790000,
+    "Salary Totals": "$5,207,946",
+    "Average Salary": "$69,765",
+    "FTE Count": 75
+  },
+  {
+    "District Name": "Uxbridge",
+    "Year": 2016,
+    "District Code": 3040000,
+    "Salary Totals": "$9,159,832",
+    "Average Salary": "$72,813",
+    "FTE Count": 126
+  },
+  {
+    "District Name": "Wachusett",
+    "Year": 2016,
+    "District Code": 7750000,
+    "Salary Totals": "$32,777,537",
+    "Average Salary": "$71,442",
+    "FTE Count": 459
+  },
+  {
+    "District Name": "Wakefield",
+    "Year": 2016,
+    "District Code": 3050000,
+    "Salary Totals": "$18,484,212",
+    "Average Salary": "$68,971",
+    "FTE Count": 268
+  },
+  {
+    "District Name": "Wales",
+    "Year": 2016,
+    "District Code": 3060000,
+    "Salary Totals": "$742,346",
+    "Average Salary": "$68,105",
+    "FTE Count": 11
+  },
+  {
+    "District Name": "Walpole",
+    "Year": 2016,
+    "District Code": 3070000,
+    "Salary Totals": "$21,838,879",
+    "Average Salary": "$75,358",
+    "FTE Count": 290
+  },
+  {
+    "District Name": "Waltham",
+    "Year": 2016,
+    "District Code": 3080000,
+    "Salary Totals": "$36,867,482",
+    "Average Salary": "$76,597",
+    "FTE Count": 481
+  },
+  {
+    "District Name": "Ware",
+    "Year": 2016,
+    "District Code": 3090000,
+    "Salary Totals": "$5,539,431",
+    "Average Salary": "$60,474",
+    "FTE Count": 92
+  },
+  {
+    "District Name": "Wareham",
+    "Year": 2016,
+    "District Code": 3100000,
+    "Salary Totals": "$13,483,291",
+    "Average Salary": "$67,721",
+    "FTE Count": 199
+  },
+  {
+    "District Name": "Watertown",
+    "Year": 2016,
+    "District Code": 3140000,
+    "Salary Totals": "$19,382,092",
+    "Average Salary": "$78,217",
+    "FTE Count": 248
+  },
+  {
+    "District Name": "Wayland",
+    "Year": 2016,
+    "District Code": 3150000,
+    "Salary Totals": "$19,347,813",
+    "Average Salary": "$93,108",
+    "FTE Count": 208
+  },
+  {
+    "District Name": "Webster",
+    "Year": 2016,
+    "District Code": 3160000,
+    "Salary Totals": "$9,702,660",
+    "Average Salary": "$75,802",
+    "FTE Count": 128
+  },
+  {
+    "District Name": "Wellesley",
+    "Year": 2016,
+    "District Code": 3170000,
+    "Salary Totals": "$35,045,998",
+    "Average Salary": "$93,536",
+    "FTE Count": 375
+  },
+  {
+    "District Name": "Wellfleet",
+    "Year": 2016,
+    "District Code": 3180000,
+    "Salary Totals": "$1,182,946",
+    "Average Salary": "$72,131",
+    "FTE Count": 16
+  },
+  {
+    "District Name": "West Boylston",
+    "Year": 2016,
+    "District Code": 3220000,
+    "Salary Totals": "$5,809,833",
+    "Average Salary": "$72,714",
+    "FTE Count": 80
+  },
+  {
+    "District Name": "West Bridgewater",
+    "Year": 2016,
+    "District Code": 3230000,
+    "Salary Totals": "$6,417,768",
+    "Average Salary": "$69,833",
+    "FTE Count": 92
+  },
+  {
+    "District Name": "West Springfield",
+    "Year": 2016,
+    "District Code": 3320000,
+    "Salary Totals": "$20,608,097",
+    "Average Salary": "$68,261",
+    "FTE Count": 302
+  },
+  {
+    "District Name": "Westborough",
+    "Year": 2016,
+    "District Code": 3210000,
+    "Salary Totals": "$22,202,832",
+    "Average Salary": "$74,649",
+    "FTE Count": 297
+  },
+  {
+    "District Name": "Westfield",
+    "Year": 2016,
+    "District Code": 3250000,
+    "Salary Totals": "$30,494,438",
+    "Average Salary": "$70,720",
+    "FTE Count": 431
+  },
+  {
+    "District Name": "Westford",
+    "Year": 2016,
+    "District Code": 3260000,
+    "Salary Totals": "$28,450,526",
+    "Average Salary": "$78,942",
+    "FTE Count": 360
+  },
+  {
+    "District Name": "Westhampton",
+    "Year": 2016,
+    "District Code": 3270000,
+    "Salary Totals": "$798,562",
+    "Average Salary": "$67,106",
+    "FTE Count": 12
+  },
+  {
+    "District Name": "Weston",
+    "Year": 2016,
+    "District Code": 3300000,
+    "Salary Totals": "$17,935,605",
+    "Average Salary": "$91,044",
+    "FTE Count": 197
+  },
+  {
+    "District Name": "Westport",
+    "Year": 2016,
+    "District Code": 3310000,
+    "Salary Totals": "$8,314,058",
+    "Average Salary": "$75,172",
+    "FTE Count": 111
+  },
+  {
+    "District Name": "Westwood",
+    "Year": 2016,
+    "District Code": 3350000,
+    "Salary Totals": "$20,893,933",
+    "Average Salary": "$88,759",
+    "FTE Count": 235
+  },
+  {
+    "District Name": "Weymouth",
+    "Year": 2016,
+    "District Code": 3360000,
+    "Salary Totals": "$33,278,365",
+    "Average Salary": "$78,821",
+    "FTE Count": 422
+  },
+  {
+    "District Name": "Whately",
+    "Year": 2016,
+    "District Code": 3370000,
+    "Salary Totals": "$641,044",
+    "Average Salary": "$70,452",
+    "FTE Count": 9
+  },
+  {
+    "District Name": "Whitman-Hanson",
+    "Year": 2016,
+    "District Code": 7800000,
+    "Salary Totals": "$19,205,540",
+    "Average Salary": "$80,526",
+    "FTE Count": 239
+  },
+  {
+    "District Name": "Whittier Regional Vocational Technical",
+    "Year": 2016,
+    "District Code": 8850000,
+    "Salary Totals": "$9,353,064",
+    "Average Salary": "$83,659",
+    "FTE Count": 112
+  },
+  {
+    "District Name": "Williamsburg",
+    "Year": 2016,
+    "District Code": 3400000,
+    "Salary Totals": "$1,133,904",
+    "Average Salary": "$65,925",
+    "FTE Count": 17
+  },
+  {
+    "District Name": "Williamstown",
+    "Year": 2016,
+    "District Code": 3410000,
+    "Salary Totals": "$2,596,282",
+    "Average Salary": "$70,170",
+    "FTE Count": 37
+  },
+  {
+    "District Name": "Wilmington",
+    "Year": 2016,
+    "District Code": 3420000,
+    "Salary Totals": "$20,682,894",
+    "Average Salary": "$74,399",
+    "FTE Count": 278
+  },
+  {
+    "District Name": "Winchendon",
+    "Year": 2016,
+    "District Code": 3430000,
+    "Salary Totals": "$6,571,800",
+    "Average Salary": "$69,177",
+    "FTE Count": 95
+  },
+  {
+    "District Name": "Winchester",
+    "Year": 2016,
+    "District Code": 3440000,
+    "Salary Totals": "$25,804,881",
+    "Average Salary": "$76,709",
+    "FTE Count": 336
+  },
+  {
+    "District Name": "Winthrop",
+    "Year": 2016,
+    "District Code": 3460000,
+    "Salary Totals": "$9,394,048",
+    "Average Salary": "$62,921",
+    "FTE Count": 149
+  },
+  {
+    "District Name": "Woburn",
+    "Year": 2016,
+    "District Code": 3470000,
+    "Salary Totals": "$28,955,587",
+    "Average Salary": "$79,592",
+    "FTE Count": 364
+  },
+  {
+    "District Name": "Worcester",
+    "Year": 2016,
+    "District Code": 3480000,
+    "Salary Totals": "$139,846,526",
+    "Average Salary": "$77,862",
+    "FTE Count": "1,796"
+  },
+  {
+    "District Name": "Worthington",
+    "Year": 2016,
+    "District Code": 3490000,
+    "Salary Totals": "$280,657",
+    "Average Salary": "$43,853",
+    "FTE Count": 6
+  },
+  {
+    "District Name": "Wrentham",
+    "Year": 2016,
+    "District Code": 3500000,
+    "Salary Totals": "$5,600,581",
+    "Average Salary": "$72,453",
+    "FTE Count": 77
+  },
+  {
+    "District Name": "State",
+    "Year": 2016,
+    "District Code": 0,
+    "Salary Totals": "$5,336,265,374",
+    "Average Salary": "$76,442",
+    "FTE Count": "69,808"
+  }
+]

@@ -5,19 +5,20 @@ const {
   schoolType,
   subjectType,
   studentGroupType,
-  createDistrictMcasDataType
+  createDistrictMcasDataType,
+  districtTeacherSalaryType
 } = require("./dataTypes");
 const {
-  sanitizeMcasData,
+  sanitizeData,
   convertSchoolMcasDataToHash
 } = require("./utils/sanitizeDataUtil");
 const allDistricts = require("./data/allDistricts");
 
-const { GraphQLList, GraphQLInt, GraphQLObjectType } = graphql;
+const { GraphQLList, GraphQLInt, GraphQLObjectType, GraphQLString } = graphql;
 
 // REMOVE once we refactor schoolMcas
 const mcasData = require("./data/mcasData");
-const sanitizedMcasData = sanitizeMcasData(mcasData);
+const sanitizedMcasData = sanitizeData(mcasData);
 const hashedMcasData = convertSchoolMcasDataToHash(sanitizedMcasData);
 
 const getDistrictCodeParameter = codes =>
@@ -79,7 +80,7 @@ const createQuery = db => {
               Subject: subject
             })
             .toArray();
-          return sanitizeMcasData(schoolMcasResults);
+          return sanitizeData(schoolMcasResults);
         }
       },
       districtMcas: {
@@ -100,7 +101,17 @@ const createQuery = db => {
             })
             .toArray();
 
-          return sanitizeMcasData(districtMcasResults);
+          return sanitizeData(districtMcasResults);
+        }
+      },
+      teacherSalaries: {
+        type: new GraphQLList(districtTeacherSalaryType),
+        resolve: async () => {
+          const teacherSalariesCollection = db.collection("teacherSalaries");
+          const teacherSalaries = await teacherSalariesCollection
+            .find({})
+            .toArray();
+          return sanitizeData(teacherSalaries);
         }
       }
     }
