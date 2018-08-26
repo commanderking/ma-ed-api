@@ -3,6 +3,8 @@ const {
   convertStringNumberWithCommaToNumber,
   sanitizeData
 } = require("./utils/sanitizeDataUtil");
+
+const { getMcasPassPercentage } = require("./utils/dataCalculationUtils");
 const {
   GraphQLList,
   GraphQLInt,
@@ -57,6 +59,11 @@ const mcasDataType = {
   studentCount: {
     type: GraphQLInt,
     resolve: mcas => convertStringNumberWithCommaToNumber(mcas.studentCount)
+  },
+  passPercent: {
+    description: "Sum of exceededPercent and metPercent",
+    type: GraphQLInt,
+    resolve: mcas => getMcasPassPercentage(mcas)
   }
 };
 
