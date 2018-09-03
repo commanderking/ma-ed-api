@@ -106,10 +106,13 @@ const createQuery = db => {
       },
       teacherSalaries: {
         type: new GraphQLList(districtTeacherSalaryType),
-        resolve: async () => {
+        args: {
+          codes: { type: new GraphQLList(graphql.GraphQLInt) }
+        },
+        resolve: async (root, { codes = [] }) => {
           const teacherSalariesCollection = db.collection("teacherSalaries");
           const teacherSalaries = await teacherSalariesCollection
-            .find({})
+            .find({ ...getDistrictCodeParameter(codes) })
             .toArray();
           return sanitizeData(teacherSalaries);
         }
